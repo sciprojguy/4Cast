@@ -8,28 +8,76 @@
 
 /* Begin PBXBuildFile section */
 		9A22D87C20658FF4003AD79C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D87B20658FF4003AD79C /* AppDelegate.m */; };
-		9A22D87F20658FF4003AD79C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D87E20658FF4003AD79C /* ViewController.m */; };
+		9A22D87F20658FF4003AD79C /* ForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D87E20658FF4003AD79C /* ForecastViewController.m */; };
 		9A22D88220658FF4003AD79C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D88020658FF4003AD79C /* Main.storyboard */; };
-		9A22D88420658FF4003AD79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D88320658FF4003AD79C /* Assets.xcassets */; };
 		9A22D88720658FF4003AD79C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D88520658FF4003AD79C /* LaunchScreen.storyboard */; };
 		9A22D88A20658FF4003AD79C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D88920658FF4003AD79C /* main.m */; };
+		9A22D8972065965F003AD79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D8962065965F003AD79C /* Assets.xcassets */; };
+		9A22D89B206597B6003AD79C /* ForecastDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D89A206597B6003AD79C /* ForecastDetailsViewController.m */; };
+		9A22D89E20659856003AD79C /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D89D20659856003AD79C /* RESTClient.m */; };
+		9A22D8A6206692E0003AD79C /* _CastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D8A5206692E0003AD79C /* _CastTests.m */; };
+		9A22D8AF20669841003AD79C /* FiveDay3HourForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D8AE20669841003AD79C /* FiveDay3HourForecast.m */; };
+		9A22D8B22066A5F1003AD79C /* ForecastListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D8B12066A5F1003AD79C /* ForecastListItem.m */; };
+		9A22D8B42066A6B4003AD79C /* testForecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D8B32066A6B4003AD79C /* testForecast.json */; };
+		9A233EEB2066B5DA003ED104 /* testForecast_Tampa.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A233EEA2066B5DA003ED104 /* testForecast_Tampa.json */; };
+		9A233EED2066B68D003ED104 /* testForecast_NewYork.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A233EEC2066B68D003ED104 /* testForecast_NewYork.json */; };
+		9A233EF32066BF06003ED104 /* IconCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF22066BF05003ED104 /* IconCache.m */; };
+		9A233EF62066C990003ED104 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF52066C990003ED104 /* SearchView.m */; };
+		9A233EF92066CC41003ED104 /* ForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF82066CC41003ED104 /* ForecastCell.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A22D8A8206692E0003AD79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A22D86F20658FF4003AD79C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A22D87620658FF4003AD79C;
+			remoteInfo = 4Cast;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9A22D87720658FF4003AD79C /* 4Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22D87A20658FF4003AD79C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A22D87B20658FF4003AD79C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9A22D87D20658FF4003AD79C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9A22D87E20658FF4003AD79C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9A22D87D20658FF4003AD79C /* ForecastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastViewController.h; sourceTree = "<group>"; };
+		9A22D87E20658FF4003AD79C /* ForecastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastViewController.m; sourceTree = "<group>"; };
 		9A22D88120658FF4003AD79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9A22D88320658FF4003AD79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A22D88620658FF4003AD79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A22D88820658FF4003AD79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A22D88920658FF4003AD79C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A22D8962065965F003AD79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A22D899206597B6003AD79C /* ForecastDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastDetailsViewController.h; sourceTree = "<group>"; };
+		9A22D89A206597B6003AD79C /* ForecastDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastDetailsViewController.m; sourceTree = "<group>"; };
+		9A22D89C20659856003AD79C /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
+		9A22D89D20659856003AD79C /* RESTClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
+		9A22D8A3206692E0003AD79C /* 4CastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4CastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A22D8A5206692E0003AD79C /* _CastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _CastTests.m; sourceTree = "<group>"; };
+		9A22D8A7206692E0003AD79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A22D8AD20669841003AD79C /* FiveDay3HourForecast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiveDay3HourForecast.h; sourceTree = "<group>"; };
+		9A22D8AE20669841003AD79C /* FiveDay3HourForecast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiveDay3HourForecast.m; sourceTree = "<group>"; };
+		9A22D8B02066A5F1003AD79C /* ForecastListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastListItem.h; sourceTree = "<group>"; };
+		9A22D8B12066A5F1003AD79C /* ForecastListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastListItem.m; sourceTree = "<group>"; };
+		9A22D8B32066A6B4003AD79C /* testForecast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testForecast.json; sourceTree = "<group>"; };
+		9A233EEA2066B5DA003ED104 /* testForecast_Tampa.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testForecast_Tampa.json; sourceTree = "<group>"; };
+		9A233EEC2066B68D003ED104 /* testForecast_NewYork.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testForecast_NewYork.json; sourceTree = "<group>"; };
+		9A233EF12066BF05003ED104 /* IconCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconCache.h; sourceTree = "<group>"; };
+		9A233EF22066BF05003ED104 /* IconCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconCache.m; sourceTree = "<group>"; };
+		9A233EF42066C990003ED104 /* SearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		9A233EF52066C990003ED104 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		9A233EF72066CC41003ED104 /* ForecastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastCell.h; sourceTree = "<group>"; };
+		9A233EF82066CC41003ED104 /* ForecastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9A22D87420658FF4003AD79C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A22D8A0206692E0003AD79C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				9A22D87920658FF4003AD79C /* 4Cast */,
+				9A22D8A4206692E0003AD79C /* 4CastTests */,
 				9A22D87820658FF4003AD79C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9A22D87720658FF4003AD79C /* 4Cast.app */,
+				9A22D8A3206692E0003AD79C /* 4CastTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,17 +108,115 @@
 		9A22D87920658FF4003AD79C /* 4Cast */ = {
 			isa = PBXGroup;
 			children = (
-				9A22D87A20658FF4003AD79C /* AppDelegate.h */,
-				9A22D87B20658FF4003AD79C /* AppDelegate.m */,
-				9A22D87D20658FF4003AD79C /* ViewController.h */,
-				9A22D87E20658FF4003AD79C /* ViewController.m */,
-				9A22D88020658FF4003AD79C /* Main.storyboard */,
-				9A22D88320658FF4003AD79C /* Assets.xcassets */,
-				9A22D88520658FF4003AD79C /* LaunchScreen.storyboard */,
-				9A22D88820658FF4003AD79C /* Info.plist */,
-				9A22D88920658FF4003AD79C /* main.m */,
+				9A22D89520659529003AD79C /* UI */,
+				9A22D89120659143003AD79C /* App */,
+				9A22D89420659518003AD79C /* Model */,
+				9A22D89220659152003AD79C /* Forecast */,
+				9A22D89320659506003AD79C /* ForecastDetails */,
+				9A22D89820659773003AD79C /* Supporting FIles */,
 			);
 			path = 4Cast;
+			sourceTree = "<group>";
+		};
+		9A22D89120659143003AD79C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D88920658FF4003AD79C /* main.m */,
+				9A22D87A20658FF4003AD79C /* AppDelegate.h */,
+				9A22D87B20658FF4003AD79C /* AppDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9A22D89220659152003AD79C /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D87D20658FF4003AD79C /* ForecastViewController.h */,
+				9A22D87E20658FF4003AD79C /* ForecastViewController.m */,
+				9A233EF42066C990003ED104 /* SearchView.h */,
+				9A233EF52066C990003ED104 /* SearchView.m */,
+				9A233EF72066CC41003ED104 /* ForecastCell.h */,
+				9A233EF82066CC41003ED104 /* ForecastCell.m */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		9A22D89320659506003AD79C /* ForecastDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D899206597B6003AD79C /* ForecastDetailsViewController.h */,
+				9A22D89A206597B6003AD79C /* ForecastDetailsViewController.m */,
+			);
+			path = ForecastDetails;
+			sourceTree = "<group>";
+		};
+		9A22D89420659518003AD79C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A233EF02066BE7A003ED104 /* IconCache */,
+				9A233EEF2066BE6C003ED104 /* Objects */,
+				9A233EEE2066BE63003ED104 /* API */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A22D89520659529003AD79C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D88520658FF4003AD79C /* LaunchScreen.storyboard */,
+				9A22D88020658FF4003AD79C /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9A22D89820659773003AD79C /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D88820658FF4003AD79C /* Info.plist */,
+				9A22D8962065965F003AD79C /* Assets.xcassets */,
+			);
+			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		9A22D8A4206692E0003AD79C /* 4CastTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D8A5206692E0003AD79C /* _CastTests.m */,
+				9A22D8A7206692E0003AD79C /* Info.plist */,
+				9A22D8B32066A6B4003AD79C /* testForecast.json */,
+				9A233EEA2066B5DA003ED104 /* testForecast_Tampa.json */,
+				9A233EEC2066B68D003ED104 /* testForecast_NewYork.json */,
+			);
+			path = 4CastTests;
+			sourceTree = "<group>";
+		};
+		9A233EEE2066BE63003ED104 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D89C20659856003AD79C /* RESTClient.h */,
+				9A22D89D20659856003AD79C /* RESTClient.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9A233EEF2066BE6C003ED104 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9A22D8B02066A5F1003AD79C /* ForecastListItem.h */,
+				9A22D8B12066A5F1003AD79C /* ForecastListItem.m */,
+				9A22D8AD20669841003AD79C /* FiveDay3HourForecast.h */,
+				9A22D8AE20669841003AD79C /* FiveDay3HourForecast.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		9A233EF02066BE7A003ED104 /* IconCache */ = {
+			isa = PBXGroup;
+			children = (
+				9A233EF12066BF05003ED104 /* IconCache.h */,
+				9A233EF22066BF05003ED104 /* IconCache.m */,
+			);
+			path = IconCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +239,24 @@
 			productReference = 9A22D87720658FF4003AD79C /* 4Cast.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9A22D8A2206692E0003AD79C /* 4CastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A22D8AA206692E0003AD79C /* Build configuration list for PBXNativeTarget "4CastTests" */;
+			buildPhases = (
+				9A22D89F206692E0003AD79C /* Sources */,
+				9A22D8A0206692E0003AD79C /* Frameworks */,
+				9A22D8A1206692E0003AD79C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A22D8A9206692E0003AD79C /* PBXTargetDependency */,
+			);
+			name = 4CastTests;
+			productName = 4CastTests;
+			productReference = 9A22D8A3206692E0003AD79C /* 4CastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,7 +268,12 @@
 				TargetAttributes = {
 					9A22D87620658FF4003AD79C = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					9A22D8A2206692E0003AD79C = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 9A22D87620658FF4003AD79C;
 					};
 				};
 			};
@@ -120,6 +291,7 @@
 			projectRoot = "";
 			targets = (
 				9A22D87620658FF4003AD79C /* 4Cast */,
+				9A22D8A2206692E0003AD79C /* 4CastTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,8 +302,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A22D88720658FF4003AD79C /* LaunchScreen.storyboard in Resources */,
-				9A22D88420658FF4003AD79C /* Assets.xcassets in Resources */,
+				9A22D8972065965F003AD79C /* Assets.xcassets in Resources */,
 				9A22D88220658FF4003AD79C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A22D8A1206692E0003AD79C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A233EEB2066B5DA003ED104 /* testForecast_Tampa.json in Resources */,
+				9A233EED2066B68D003ED104 /* testForecast_NewYork.json in Resources */,
+				9A22D8B42066A6B4003AD79C /* testForecast.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,13 +324,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A22D87F20658FF4003AD79C /* ViewController.m in Sources */,
+				9A233EF62066C990003ED104 /* SearchView.m in Sources */,
+				9A22D89E20659856003AD79C /* RESTClient.m in Sources */,
+				9A22D87F20658FF4003AD79C /* ForecastViewController.m in Sources */,
 				9A22D88A20658FF4003AD79C /* main.m in Sources */,
+				9A233EF92066CC41003ED104 /* ForecastCell.m in Sources */,
+				9A233EF32066BF06003ED104 /* IconCache.m in Sources */,
+				9A22D89B206597B6003AD79C /* ForecastDetailsViewController.m in Sources */,
 				9A22D87C20658FF4003AD79C /* AppDelegate.m in Sources */,
+				9A22D8B22066A5F1003AD79C /* ForecastListItem.m in Sources */,
+				9A22D8AF20669841003AD79C /* FiveDay3HourForecast.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A22D89F206692E0003AD79C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A22D8A6206692E0003AD79C /* _CastTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A22D8A9206692E0003AD79C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A22D87620658FF4003AD79C /* 4Cast */;
+			targetProxy = 9A22D8A8206692E0003AD79C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9A22D88020658FF4003AD79C /* Main.storyboard */ = {
@@ -278,12 +483,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = 4Cast/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "4Cast/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-Cast";
+				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -291,12 +499,43 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = 4Cast/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "4Cast/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-Cast";
+				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9A22D8AB206692E0003AD79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = 4CastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4Cast.app/4Cast";
+			};
+			name = Debug;
+		};
+		9A22D8AC206692E0003AD79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = 4CastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4Cast.app/4Cast";
 			};
 			name = Release;
 		};
@@ -317,6 +556,15 @@
 			buildConfigurations = (
 				9A22D88E20658FF4003AD79C /* Debug */,
 				9A22D88F20658FF4003AD79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A22D8AA206692E0003AD79C /* Build configuration list for PBXNativeTarget "4CastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A22D8AB206692E0003AD79C /* Debug */,
+				9A22D8AC206692E0003AD79C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
