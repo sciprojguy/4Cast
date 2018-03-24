@@ -129,7 +129,7 @@
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
     
     XCTAssertNotNil(theForecast, @"Unable to get the forecast");
-    XCTAssertEqual(404, theForecast.statusCode, @"Should have been 404, not %ld", theForecast.statusCode);
+    XCTAssertEqual(200, theForecast.statusCode, @"Should have been 200, not %ld", theForecast.statusCode);
     XCTAssertNil(anythingHappened, @"Got error: %@", anythingHappened);
 }
 
