@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1EE096CB1B534950774403 /* libPods-4Cast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3F60485CD0E23288A8BC77 /* libPods-4Cast.a */; };
 		9A22D87C20658FF4003AD79C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D87B20658FF4003AD79C /* AppDelegate.m */; };
 		9A22D87F20658FF4003AD79C /* ForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D87E20658FF4003AD79C /* ForecastViewController.m */; };
 		9A22D88220658FF4003AD79C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D88020658FF4003AD79C /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 		9A233EF62066C990003ED104 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF52066C990003ED104 /* SearchView.m */; };
 		9A233EF92066CC41003ED104 /* ForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF82066CC41003ED104 /* ForecastCell.m */; };
 		9AA8DC582066E73500F6A642 /* ios-marketing.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC572066E73500F6A642 /* ios-marketing.png */; };
+		9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA8DC592066F23E00F6A642 /* QuartzCore.framework */; };
+		FEA5D73B78351801B8B68A41 /* libPods-4CastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6806A50A7E417479A20CC21C /* libPods-4CastTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08CD230925C4AE548B816B79 /* Pods-4Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-4Cast/Pods-4Cast.release.xcconfig"; sourceTree = "<group>"; };
+		3A3F60485CD0E23288A8BC77 /* libPods-4Cast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4Cast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6806A50A7E417479A20CC21C /* libPods-4CastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4CastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4CastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A22D87720658FF4003AD79C /* 4Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22D87A20658FF4003AD79C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A22D87B20658FF4003AD79C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 		9A233EF72066CC41003ED104 /* ForecastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastCell.h; sourceTree = "<group>"; };
 		9A233EF82066CC41003ED104 /* ForecastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastCell.m; sourceTree = "<group>"; };
 		9AA8DC572066E73500F6A642 /* ios-marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ios-marketing.png"; path = "Assets.xcassets/AppIcon.appiconset/ios-marketing.png"; sourceTree = "<group>"; };
+		9AA8DC592066F23E00F6A642 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FC4A59A31923B46F7787DC35 /* Pods-4Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4Cast/Pods-4Cast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */,
+				4C1EE096CB1B534950774403 /* libPods-4Cast.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,18 +95,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA5D73B78351801B8B68A41 /* libPods-4CastTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26A40D040CD99A1366B494C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AA8DC592066F23E00F6A642 /* QuartzCore.framework */,
+				3A3F60485CD0E23288A8BC77 /* libPods-4Cast.a */,
+				6806A50A7E417479A20CC21C /* libPods-4CastTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9A22D86E20658FF4003AD79C = {
 			isa = PBXGroup;
 			children = (
 				9A22D87920658FF4003AD79C /* 4Cast */,
 				9A22D8A4206692E0003AD79C /* 4CastTests */,
 				9A22D87820658FF4003AD79C /* Products */,
+				E6EE6287C39693DBAD02031C /* Pods */,
+				26A40D040CD99A1366B494C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +247,17 @@
 			path = IconCache;
 			sourceTree = "<group>";
 		};
+		E6EE6287C39693DBAD02031C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC4A59A31923B46F7787DC35 /* Pods-4Cast.debug.xcconfig */,
+				08CD230925C4AE548B816B79 /* Pods-4Cast.release.xcconfig */,
+				3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */,
+				74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A22D88D20658FF4003AD79C /* Build configuration list for PBXNativeTarget "4Cast" */;
 			buildPhases = (
+				9058E8E21FFE05F7F4F9053E /* [CP] Check Pods Manifest.lock */,
 				9A22D87320658FF4003AD79C /* Sources */,
 				9A22D87420658FF4003AD79C /* Frameworks */,
 				9A22D87520658FF4003AD79C /* Resources */,
+				7F8547B60B2E986816AAB921 /* [CP] Embed Pods Frameworks */,
+				AE5EFFB8F5493AD9FF2E3219 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A22D8AA206692E0003AD79C /* Build configuration list for PBXNativeTarget "4CastTests" */;
 			buildPhases = (
+				36DF49CB5AD33CEC4284FA8E /* [CP] Check Pods Manifest.lock */,
 				9A22D89F206692E0003AD79C /* Sources */,
 				9A22D8A0206692E0003AD79C /* Frameworks */,
 				9A22D8A1206692E0003AD79C /* Resources */,
+				80D26F6519948E934D195376 /* [CP] Embed Pods Frameworks */,
+				3A72F2F88C8FABECA441038D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +364,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36DF49CB5AD33CEC4284FA8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-4CastTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A72F2F88C8FABECA441038D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F8547B60B2E986816AAB921 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4Cast/Pods-4Cast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80D26F6519948E934D195376 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9058E8E21FFE05F7F4F9053E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-4Cast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5EFFB8F5493AD9FF2E3219 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-4Cast/Pods-4Cast-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4Cast/Pods-4Cast-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9A22D87320658FF4003AD79C /* Sources */ = {
@@ -485,38 +629,43 @@
 		};
 		9A22D88E20658FF4003AD79C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC4A59A31923B46F7787DC35 /* Pods-4Cast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79GK225UV2;
 				INFOPLIST_FILE = "4Cast/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
+				PROVISIONING_PROFILE_SPECIFIER = "Coding Challenge";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9A22D88F20658FF4003AD79C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08CD230925C4AE548B816B79 /* Pods-4Cast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79GK225UV2;
 				INFOPLIST_FILE = "4Cast/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
+				PROVISIONING_PROFILE_SPECIFIER = "Coding Challenge";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		9A22D8AB206692E0003AD79C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +680,7 @@
 		};
 		9A22D8AC206692E0003AD79C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

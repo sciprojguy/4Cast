@@ -11,6 +11,8 @@
 #import "SearchView.h"
 #import "ForecastCell.h"
 
+#import "MBProgressHUD.h"
+
 #import "IconCache.h"
 #import "RESTClient.h"
 #import "FiveDay3HourForecast.h"
@@ -117,6 +119,8 @@
 
 -(IBAction)fetchTheWeather:(id)sender {
 
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     NSString *city = self.searchView.cityField.text;
     if(nil == city || [@"" isEqualToString:city]) {
         city = @"New York,USA";
@@ -126,8 +130,6 @@
     [self.searchView.cityField resignFirstResponder];
     
 dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //#0 - start MBProgressHUD
-    
         //#2 - get forecast
         [self.weatherClient forecastForCity:city completion:^(FiveDay3HourForecast *forecast, NSError *err) {
                 if(err) {
@@ -135,6 +137,9 @@ dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), 
                     [self displayConnectionErrorAlert];
                 }
                 else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [hud hideAnimated:YES];
+                    });
                     self.forecast = forecast;
                     if(200 == self.forecast.statusCode) {
                         [self downloadIconsIfNecessary];
