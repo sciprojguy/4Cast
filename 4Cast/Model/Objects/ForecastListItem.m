@@ -13,14 +13,9 @@
 -(instancetype)initFromDictionary:(NSDictionary *)jsonData {
     self = [super init];
     if(self) {
-    
         if(jsonData[@"dt"]) {
             NSTimeInterval interval = [jsonData[@"dt"] doubleValue];
             self.dateTime = [[NSDate alloc] initWithTimeIntervalSince1970:interval];
-        }
-        
-        if(jsonData[@"dt_txt"]) {
-            //add this?
         }
         
         if(jsonData[@"main"]) {
@@ -60,11 +55,11 @@
         }
         
         if(jsonData[@"snow"]) {
-            self.rain_3hr = [jsonData[@"snow"][@"3h"] copy];
+            self.snow_3hr = [jsonData[@"snow"][@"3h"] copy];
         }
         
         if(jsonData[@"clouds"]) {
-            self.rain_3hr = [jsonData[@"clouds"][@"all"] copy];
+            self.cloudsAll = [jsonData[@"clouds"][@"all"] copy];
         }
         
         if(jsonData[@"sys"]) {
@@ -75,7 +70,24 @@
 }
 
 -(void)dealloc {
-
+    self.systemPod = nil;
+    self.rain_3hr = nil;
+    self.cloudsAll = nil;
+    self.snow_3hr = nil;
+    self.icon = nil;
+    self.main = nil;
+    self.grndLevel = nil;
+    self.seaLevel = nil;
+    self.tempMin = nil;
+    self.tempMax = nil;
+    self.temp = nil;
+    self.tempK = nil;
+    self.weathers = nil;
+    self.weatherDescription = nil;
+    self.windSpeed = nil;
+    self.windDirection = nil;
+    self.pressure = nil;
+    self.humidity = nil;
 }
 
 @end

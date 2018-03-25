@@ -72,6 +72,7 @@
 - (IBAction)toggleSearchView:(id)sender {
     if(self.searchView.hidden) {
         self.searchView.hidden = NO;
+        [self.view bringSubviewToFront:self.searchView];
     }
     else {
         self.searchView.hidden = YES;
@@ -132,14 +133,13 @@
 dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //#2 - get forecast
         [self.weatherClient forecastForCity:city completion:^(FiveDay3HourForecast *forecast, NSError *err) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [hud hideAnimated:YES];
+                });
                 if(err) {
-                    //display alert saying there was a connection issue
                     [self displayConnectionErrorAlert];
                 }
                 else {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [hud hideAnimated:YES];
-                    });
                     self.forecast = forecast;
                     if(200 == self.forecast.statusCode) {
                         [self downloadIconsIfNecessary];

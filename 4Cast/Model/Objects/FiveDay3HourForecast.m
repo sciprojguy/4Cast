@@ -36,9 +36,7 @@
             self.longitude = [dict[@"city"][@"coord"][@"lon"] copy];
         }
         
-        //loop thru jsonDict[@"list"] and
-        self.list = [[NSMutableArray alloc] init];
-        
+        self.list = [[NSMutableArray alloc] init];        
         NSArray *list = dict[@"list"];
         for( int i=0; i<self.listCount; i++ ) {
             NSDictionary *entry = list[i];
@@ -57,7 +55,13 @@
 }
 
 -(void)dealloc {
-
+    self.cityId = nil;
+    self.cityCountry = nil;
+    self.cityName = nil;
+    self.latitude = nil;
+    self.longitude = nil;
+    self.statusMsg = nil;
+    self.list = nil;
 }
 
 @end
