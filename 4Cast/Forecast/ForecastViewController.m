@@ -71,11 +71,15 @@
 
 - (IBAction)toggleSearchView:(id)sender {
     if(self.searchView.hidden) {
-        self.searchView.hidden = NO;
-        [self.view bringSubviewToFront:self.searchView];
+        [UIView animateWithDuration:0.5 animations:^{
+            self.searchView.hidden = NO;
+            [self.view bringSubviewToFront:self.searchView];
+        }];
     }
     else {
-        self.searchView.hidden = YES;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.searchView.hidden = YES;
+        }];
     }
 }
 
