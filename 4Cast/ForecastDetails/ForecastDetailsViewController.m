@@ -42,8 +42,8 @@
     self.iconView.image = iconImg;
     self.descriptionLabel.text = item.weatherDescription;
     
-    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low of %.1f F", [item.tempMin doubleValue]];
-    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High of %.1f F", [item.tempMax doubleValue]];;
+    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low of %.1f ºF", [item.tempMin doubleValue]];
+    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High of %.1f ºF", [item.tempMax doubleValue]];;
     
     self.humidityLabel.text = [[NSString alloc] initWithFormat:@"Rel Humidity %@%%", item.humidity];
 }
