@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xes-kU-KLm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xes-kU-KLm">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gSk-bI-EFk" id="yhc-Tl-fHr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t7e-RZ-gOx">
@@ -87,7 +87,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djS-4v-Ke4" customClass="SearchView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="98"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city,country here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Xw-rJ-cKn">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city,country here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Xw-rJ-cKn">
                                         <rect key="frame" x="8" y="36" width="287" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -96,8 +96,8 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="NER-FL-h41"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuY-j7-YOC">
-                                        <rect key="frame" x="317" y="36" width="44" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuY-j7-YOC">
+                                        <rect key="frame" x="303" y="36" width="64" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.98779541705337925" blue="0.97095325038645797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Dti-N7-YKk"/>
@@ -117,9 +117,9 @@
                                     <constraint firstItem="2Xw-rJ-cKn" firstAttribute="top" secondItem="djS-4v-Ke4" secondAttribute="top" constant="36" id="7MU-Sv-tHP"/>
                                     <constraint firstItem="DuY-j7-YOC" firstAttribute="top" secondItem="djS-4v-Ke4" secondAttribute="top" constant="36" id="BVA-ov-Cv7"/>
                                     <constraint firstAttribute="height" constant="98" id="CcO-iS-dfW"/>
-                                    <constraint firstItem="DuY-j7-YOC" firstAttribute="leading" secondItem="2Xw-rJ-cKn" secondAttribute="trailing" constant="22" id="CjT-Rt-bg1"/>
+                                    <constraint firstItem="DuY-j7-YOC" firstAttribute="leading" secondItem="2Xw-rJ-cKn" secondAttribute="trailing" constant="8" id="CjT-Rt-bg1"/>
                                     <constraint firstItem="2Xw-rJ-cKn" firstAttribute="leading" secondItem="djS-4v-Ke4" secondAttribute="leading" constant="8" id="Df9-tB-itI"/>
-                                    <constraint firstAttribute="trailing" secondItem="DuY-j7-YOC" secondAttribute="trailing" constant="14" id="Gw5-xx-tlQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="DuY-j7-YOC" secondAttribute="trailing" constant="8" id="Gw5-xx-tlQ"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="cityField" destination="2Xw-rJ-cKn" id="u4G-wQ-NTV"/>

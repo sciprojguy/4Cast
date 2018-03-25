@@ -35,7 +35,7 @@
 -(void)constructUI:(ForecastListItem *)item {
 
     NSDateFormatter *fmtr = [[NSDateFormatter alloc] init];
-    fmtr.dateFormat = @"EEE, MMM dd yyyy h:mm a";
+    fmtr.dateFormat = @"EEEE, MMMM dd yyyy h:mm a";
     self.timeAndDate.text = [fmtr stringFromDate:item.dateTime];
     
     UIImage *iconImg = [[IconCache sharedCache] iconNamed:item.icon];

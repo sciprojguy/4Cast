@@ -76,7 +76,7 @@
 		9A233EF52066C990003ED104 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		9A233EF72066CC41003ED104 /* ForecastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastCell.h; sourceTree = "<group>"; };
 		9A233EF82066CC41003ED104 /* ForecastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastCell.m; sourceTree = "<group>"; };
-		9AA8DC572066E73500F6A642 /* ios-marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ios-marketing.png"; path = "Assets.xcassets/AppIcon.appiconset/ios-marketing.png"; sourceTree = "<group>"; };
+		9AA8DC572066E73500F6A642 /* ios-marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-marketing.png"; sourceTree = "<group>"; };
 		9AA8DC592066F23E00F6A642 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FC4A59A31923B46F7787DC35 /* Pods-4Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4Cast/Pods-4Cast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,12 +158,12 @@
 		9A22D89220659152003AD79C /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
-				9A22D87D20658FF4003AD79C /* ForecastViewController.h */,
-				9A22D87E20658FF4003AD79C /* ForecastViewController.m */,
 				9A233EF42066C990003ED104 /* SearchView.h */,
 				9A233EF52066C990003ED104 /* SearchView.m */,
 				9A233EF72066CC41003ED104 /* ForecastCell.h */,
 				9A233EF82066CC41003ED104 /* ForecastCell.m */,
+				9A22D87D20658FF4003AD79C /* ForecastViewController.h */,
+				9A22D87E20658FF4003AD79C /* ForecastViewController.m */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -192,6 +192,7 @@
 			children = (
 				9A22D88520658FF4003AD79C /* LaunchScreen.storyboard */,
 				9A22D88020658FF4003AD79C /* Main.storyboard */,
+				9AA8DC572066E73500F6A642 /* ios-marketing.png */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -199,7 +200,6 @@
 		9A22D89820659773003AD79C /* Supporting FIles */ = {
 			isa = PBXGroup;
 			children = (
-				9AA8DC572066E73500F6A642 /* ios-marketing.png */,
 				9A22D88820658FF4003AD79C /* Info.plist */,
 				9A22D8962065965F003AD79C /* Assets.xcassets */,
 			);
