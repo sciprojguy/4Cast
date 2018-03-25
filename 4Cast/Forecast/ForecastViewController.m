@@ -117,6 +117,9 @@
             [self.weatherClient downloadIcon:item.icon completion:^(NSDictionary *results) {
                 if(results[@"Data"]) {
                     [ic storeIcon:results[@"Data"] withName:item.icon];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.forecastsTable reloadData];
+                    });
                 }
             }];
         }
