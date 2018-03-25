@@ -26,8 +26,8 @@
         client.sessionQueue.maxConcurrentOperationCount = 4;
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         [config setAllowsCellularAccess:YES];
-        config.timeoutIntervalForRequest = 60;
-        config.timeoutIntervalForResource = 60;
+        config.timeoutIntervalForRequest = 15;
+        config.timeoutIntervalForResource = 15;
         config.networkServiceType = NSURLNetworkServiceTypeDefault;
         config.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
         client.session = [NSURLSession sessionWithConfiguration:config delegate:client delegateQueue:client.sessionQueue];
@@ -72,7 +72,6 @@
             forecast.statusCode = httpResponse.statusCode;
         }
         
-        NSLog(@"YEAH");
         if(completion) {
             completion(forecast, err);
         }

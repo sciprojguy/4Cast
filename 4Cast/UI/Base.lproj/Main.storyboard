@@ -84,11 +84,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="D9b-wC-b51"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djS-4v-Ke4" customClass="SearchView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djS-4v-Ke4" customClass="SearchView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="98"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Xw-rJ-cKn">
-                                        <rect key="frame" x="8" y="36" width="275" height="30"/>
+                                        <rect key="frame" x="8" y="36" width="287" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -97,11 +97,11 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuY-j7-YOC">
-                                        <rect key="frame" x="305" y="36" width="56" height="30"/>
+                                        <rect key="frame" x="317" y="36" width="44" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Dti-N7-YKk"/>
                                             <constraint firstAttribute="height" constant="30" id="anN-h9-XdN"/>
-                                            <constraint firstAttribute="width" constant="56" id="czc-B3-Y15"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="czc-B3-Y15"/>
                                         </constraints>
                                         <state key="normal" title="Go"/>
                                         <connections>
@@ -113,7 +113,7 @@
                                 <constraints>
                                     <constraint firstItem="2Xw-rJ-cKn" firstAttribute="top" secondItem="djS-4v-Ke4" secondAttribute="top" constant="36" id="7MU-Sv-tHP"/>
                                     <constraint firstItem="DuY-j7-YOC" firstAttribute="top" secondItem="djS-4v-Ke4" secondAttribute="top" constant="36" id="BVA-ov-Cv7"/>
-                                    <constraint firstAttribute="height" constant="150" id="CcO-iS-dfW"/>
+                                    <constraint firstAttribute="height" constant="98" id="CcO-iS-dfW"/>
                                     <constraint firstItem="DuY-j7-YOC" firstAttribute="leading" secondItem="2Xw-rJ-cKn" secondAttribute="trailing" constant="22" id="CjT-Rt-bg1"/>
                                     <constraint firstItem="2Xw-rJ-cKn" firstAttribute="leading" secondItem="djS-4v-Ke4" secondAttribute="leading" constant="8" id="Df9-tB-itI"/>
                                     <constraint firstAttribute="trailing" secondItem="DuY-j7-YOC" secondAttribute="trailing" constant="14" id="Gw5-xx-tlQ"/>
