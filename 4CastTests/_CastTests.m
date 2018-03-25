@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "RESTClient.h"
-#import "ForecastListItem.h"
+#import "_Cast-Swift.h"
 #import "FiveDay3HourForecast.h"
 #import "IconCache.h"
 

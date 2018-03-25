@@ -16,7 +16,8 @@
 #import "IconCache.h"
 #import "RESTClient.h"
 #import "FiveDay3HourForecast.h"
-#import "ForecastListItem.h"
+
+#import "_Cast-Swift.h"
 
 @interface ForecastViewController () <UITableViewDelegate, UITableViewDataSource, ForecastDetailsDelegate, UITextFieldDelegate>
 

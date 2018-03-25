@@ -7,6 +7,7 @@
 //
 
 #import "FiveDay3HourForecast.h"
+#import "_Cast-Swift.h"
 
 @implementation FiveDay3HourForecast
 
@@ -40,7 +41,7 @@
         NSArray *list = dict[@"list"];
         for( int i=0; i<self.listCount; i++ ) {
             NSDictionary *entry = list[i];
-            ForecastListItem *item = [[ForecastListItem alloc] initFromDictionary:entry];
+            ForecastListItem *item = [[ForecastListItem alloc] initFrom:entry];
             if(item) {
                 [self.list addObject:item];
             }
