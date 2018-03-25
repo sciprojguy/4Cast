@@ -16,7 +16,7 @@
     // Initialization code
 }
 
--(void)setFromForecaseItem:(ForecastListItem *)item {
+-(void)setFromForecastItem:(ForecastListItem *)item {
     //move this into ForecastCell
     self.iconView.image = [[IconCache sharedCache] iconNamed:item.icon];
     self.descriptionLabel.text = item.weatherDescription;
