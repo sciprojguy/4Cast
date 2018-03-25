@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "_Cast-Swift.h"
+#import "Forecast-Swift.h"
 
 @interface ForecastCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;

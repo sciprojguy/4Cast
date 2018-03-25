@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "_Cast-Swift.h"
+
+#import "Forecast-Swift.h"
 
 @interface FiveDay3HourForecast : NSObject
 

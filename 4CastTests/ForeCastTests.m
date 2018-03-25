@@ -9,15 +9,15 @@
 #import <XCTest/XCTest.h>
 
 #import "RESTClient.h"
-#import "_Cast-Swift.h"
+#import "Forecast-Swift.h"
 #import "FiveDay3HourForecast.h"
 #import "IconCache.h"
 
-@interface _CastTests : XCTestCase
+@interface ForeCastTests : XCTestCase
 @property (strong, nonatomic) RESTClient *restClient;
 @end
 
-@implementation _CastTests
+@implementation ForeCastTests
 
 -(void)setUp {
     [super setUp];
