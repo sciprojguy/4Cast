@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet SearchView *searchView;
 @property (nonatomic, strong) RESTClient *weatherClient;
 @property (weak, nonatomic) IBOutlet UITableView *forecastsTable;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) FiveDay3HourForecast *forecast;
 @end
 
@@ -30,6 +31,11 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(fetchTheWeather:) forControlEvents:UIControlEventValueChanged];
+    [self.forecastsTable addSubview:self.refreshControl];
+
     self.weatherClient = [RESTClient shared];
     [self fetchTheWeather:nil];
 }
@@ -142,6 +148,7 @@ dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), 
         [self.weatherClient forecastForCity:city completion:^(FiveDay3HourForecast *forecast, NSError *err) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [hud hideAnimated:YES];
+                    [self.refreshControl endRefreshing];
                 });
                 if(err) {
                     [self displayConnectionErrorAlert];
