@@ -61,7 +61,7 @@
         cell = [[ForecastCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ForecastCell"];
     }
     
-    [cell setFromForecaseItem:item];
+    [cell setFromForecastItem:item];
     
     return cell;
 }

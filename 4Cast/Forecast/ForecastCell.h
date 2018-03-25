@@ -17,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lowTempLabel;
 @property (weak, nonatomic) IBOutlet UILabel *highTempLabel;
 
--(void)setFromForecaseItem:(ForecastListItem *)item;
+-(void)setFromForecastItem:(ForecastListItem *)item;
 
 @end
