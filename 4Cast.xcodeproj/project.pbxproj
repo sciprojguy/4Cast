@@ -24,10 +24,8 @@
 		9A233EF32066BF06003ED104 /* IconCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF22066BF05003ED104 /* IconCache.m */; };
 		9A233EF62066C990003ED104 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF52066C990003ED104 /* SearchView.m */; };
 		9A233EF92066CC41003ED104 /* ForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF82066CC41003ED104 /* ForecastCell.m */; };
-		9A4D271F20682AA80096A9B0 /* IconCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF22066BF05003ED104 /* IconCache.m */; };
-		9A4D272020682AA80096A9B0 /* FiveDay3HourForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D8AE20669841003AD79C /* FiveDay3HourForecast.m */; };
-		9A4D272120682AA80096A9B0 /* ForecastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */; };
-		9A4D272220682AA80096A9B0 /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D89D20659856003AD79C /* RESTClient.m */; };
+		9A6FA0EC2080E9C600C393AA /* ForecastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */; };
+		9A6FA0EF2080EAD600C393AA /* TestingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */; };
 		9AA8DC582066E73500F6A642 /* ios-marketing.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC572066E73500F6A642 /* ios-marketing.png */; };
 		9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA8DC592066F23E00F6A642 /* QuartzCore.framework */; };
 		9AA8DC622067F0F600F6A642 /* ForecastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */; };
@@ -50,7 +48,6 @@
 		3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6806A50A7E417479A20CC21C /* libPods-4CastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4CastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4CastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests.release.xcconfig"; sourceTree = "<group>"; };
-		9A22D686206829AF00D7E8A4 /* 4CastTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "4CastTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9A22D87720658FF4003AD79C /* 4Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22D87A20658FF4003AD79C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A22D87B20658FF4003AD79C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +76,8 @@
 		9A233EF52066C990003ED104 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		9A233EF72066CC41003ED104 /* ForecastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastCell.h; sourceTree = "<group>"; };
 		9A233EF82066CC41003ED104 /* ForecastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastCell.m; sourceTree = "<group>"; };
+		9A6FA0ED2080EAD600C393AA /* TestingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingAppDelegate.h; sourceTree = "<group>"; };
+		9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingAppDelegate.m; sourceTree = "<group>"; };
 		9AA8DC572066E73500F6A642 /* ios-marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-marketing.png"; sourceTree = "<group>"; };
 		9AA8DC592066F23E00F6A642 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9AA8DC602067F0F600F6A642 /* 4Cast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "4Cast-Bridging-Header.h"; path = "../Model/Objects/4Cast-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -220,7 +219,8 @@
 				9A22D8B32066A6B4003AD79C /* testForecast.json */,
 				9A233EEA2066B5DA003ED104 /* testForecast_Tampa.json */,
 				9A233EEC2066B68D003ED104 /* testForecast_NewYork.json */,
-				9A22D686206829AF00D7E8A4 /* 4CastTests-Bridging-Header.h */,
+				9A6FA0ED2080EAD600C393AA /* TestingAppDelegate.h */,
+				9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */,
 			);
 			path = 4CastTests;
 			sourceTree = "<group>";
@@ -497,11 +497,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4D272220682AA80096A9B0 /* RESTClient.m in Sources */,
+				9A6FA0EC2080E9C600C393AA /* ForecastListItem.swift in Sources */,
+				9A6FA0EF2080EAD600C393AA /* TestingAppDelegate.m in Sources */,
 				9A22D8A6206692E0003AD79C /* ForeCastTests.m in Sources */,
-				9A4D271F20682AA80096A9B0 /* IconCache.m in Sources */,
-				9A4D272020682AA80096A9B0 /* FiveDay3HourForecast.m in Sources */,
-				9A4D272120682AA80096A9B0 /* ForecastListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +650,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
+				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
 				PROVISIONING_PROFILE_SPECIFIER = "Coding Challenge";
@@ -676,6 +675,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
+				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
 				PROVISIONING_PROFILE_SPECIFIER = "Coding Challenge";
@@ -691,13 +691,15 @@
 			baseConfigurationReference = 3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79GK225UV2;
 				INFOPLIST_FILE = 4CastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "4CastTests/4CastTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Forecast-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -711,13 +713,15 @@
 			baseConfigurationReference = 74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79GK225UV2;
 				INFOPLIST_FILE = 4CastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "4CastTests/4CastTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Forecast-Swift.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
