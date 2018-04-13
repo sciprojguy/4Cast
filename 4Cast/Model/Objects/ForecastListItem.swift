@@ -6,9 +6,9 @@
 //  Copyright © 2018 SampleSoft. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-@objc public class ForecastListItem: NSObject {
+@objc public class ForecastListItem: NSObject, NSCopying {
     
     var dateTime: Date?
 
@@ -65,7 +65,7 @@ import UIKit
             if let tempK = main["temp_kf"] as? Double {
                 self.tempK = tempK
             }
-            if let tempMin = main["temp_max"] as? Double {
+            if let tempMin = main["temp_min"] as? Double {
                 self.tempMin = tempMin
             }
             if let tempMax = main["temp_max"] as? Double {
@@ -88,20 +88,24 @@ import UIKit
         }
         
         if let wind = dict["wind"] as? [String:Any] {
-            self.windSpeed = wind["speed"] as? Double ?? nil
-            self.windDirection = wind["deg"] as? Double ?? nil
+            self.windSpeed = wind["speed"] as? Double ?? 0
+            self.windDirection = wind["deg"] as? Double ?? 0
         }
         
         if let rain = dict["rain"] as? [String:Any] {
-            self.rain_3hr = rain["3h"] as? Double ?? nil
+            self.rain_3hr = rain["3h"] as? Double ?? 0
         }
 
         if let snow = dict["snow"] as? [String:Any] {
-            self.rain_3hr = snow["3h"] as? Double ?? nil
+            self.rain_3hr = snow["3h"] as? Double ?? 0
         }
 
         if let sys = dict["sys"] as? [String:Any] {
-            self.pod = sys["pod"] as? Int64 ?? nil
+            self.pod = sys["pod"] as? Int64 ?? 0
         }
+    }
+    
+    @objc public func copy(with zone: NSZone? = nil) -> Any {
+        return self.copy()
     }
 }

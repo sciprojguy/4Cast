@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FiveDay3HourForecast.h"
+#import "Forecast-Swift.h"
 
 @interface RESTClient : NSObject
+
+@property (nonatomic, assign) BOOL useMock;
 
 +(RESTClient *)shared;
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "FiveDay3HourForecast.h"
+#import "Forecast-Swift.h"
 
 @protocol ForecastDetailsDelegate <NSObject>
 -(ForecastListItem *)forecastDetailsAtIndex:(NSInteger)index;

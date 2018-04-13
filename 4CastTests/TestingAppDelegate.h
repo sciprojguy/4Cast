@@ -8,6 +8,8 @@
 
 @import UIKit;
 
-@interface TestingAppDelegate : NSObject
+@interface TestingAppDelegate : UIResponder <UIApplicationDelegate>
+
 @property (nonatomic, strong) UIWindow *window;
+
 @end

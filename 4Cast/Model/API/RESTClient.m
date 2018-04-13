@@ -8,6 +8,8 @@
 
 #import "RESTClient.h"
 
+#import "Forecast-Swift.h"
+
 @interface RESTClient () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
@@ -36,9 +38,16 @@
     return client;
 }
 
+//todo: check in here for useMock.  if NO, proceed.  if YES,
+//look up JSON for city and country & return the forecast
 
 -(void)forecastForCity:(NSString *)cityAndCountry completion:(void(^)(FiveDay3HourForecast *forecast, NSError *err))completion {
 
+    if(self.useMock) {
+        TestingHelper *helper = [TestingHelper shared];
+        NSLog(@"USE MOCK");
+    }
+    
     NSMutableCharacterSet *allowed = [NSMutableCharacterSet
                                     alphanumericCharacterSet];
     NSString *encoded = [cityAndCountry stringByAddingPercentEncodingWithAllowedCharacters:allowed];
@@ -80,8 +89,15 @@
     [task resume];
 }
 
+//todo: check in here for useMock.  if NO, proceed.  if YES,
+//look up icon & return it
+
 -(void)downloadIcon:(NSString *)iconStem completion:(void(^)(NSDictionary *results))completion {
 
+    if(self.useMock) {
+        NSLog(@"USE MOCK");
+    }
+    
     NSString *urlString = [[NSString alloc] initWithFormat:@"https://openweathermap.org/img/w/%@.png", iconStem];
     NSURL *url = [NSURL URLWithString:urlString];
     

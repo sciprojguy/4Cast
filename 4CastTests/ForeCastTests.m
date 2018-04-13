@@ -10,7 +10,6 @@
 
 #import "RESTClient.h"
 #import "Forecast-Swift.h"
-#import "FiveDay3HourForecast.h"
 #import "IconCache.h"
 
 @interface ForeCastTests : XCTestCase

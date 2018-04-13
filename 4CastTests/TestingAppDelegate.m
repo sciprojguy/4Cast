@@ -7,6 +7,16 @@
 //
 
 #import "TestingAppDelegate.h"
+#import "RESTClient.h"
 
 @implementation TestingAppDelegate
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    RESTClient *client = [RESTClient shared];
+    client.useMock = YES;
+
+    return YES;
+}
+
+
 @end
