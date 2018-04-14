@@ -8,7 +8,8 @@
 
 import Foundation
 
-@objc class FiveDay3HourForecast: NSObject {
+@objc public class FiveDay3HourForecast: NSObject {
+
     var statusCode:Int = -1
     var statusMsg:String = ""
     var listCount:Int = 0
@@ -18,6 +19,36 @@ import Foundation
     var latitude:Double? = nil
     var longitude:Double? = nil
     var list:[[String:Any]] = []
+    
+    @objc func initFromDict(_ dict:[String:Any]) -> FiveDay3HourForecast? {
+        if let code = dict["cod"] as? String {
+            self.statusCode = Int(code)!
+        }
+
+        if let msg = dict["msg"] as? String {
+            self.statusMsg = msg
+        }
+
+        if let cnt = dict["cnt"] as? Int {
+            self.listCount = cnt
+        }
+
+        if let cityInfo = dict["city"] as? [String:Any] {
+            self.cityId = cityInfo["id"] as? Int64 ?? 0
+            self.cityName = cityInfo["name"] as? String ?? ""
+            self.cityCountry = cityInfo["country"] as? String ?? ""
+            if let coord = cityInfo["coord"] as? [String:Double] {
+                self.latitude = coord["lat"]
+                self.longitude = coord["lon"]
+            }
+        }
+
+        if let forecastList = dict["list"] as? [[String:Any]] {
+            self.list = forecastList
+        }
+        
+        return self
+    }
     
     @objc func initFromJson(_ json:Data) -> FiveDay3HourForecast? {
     

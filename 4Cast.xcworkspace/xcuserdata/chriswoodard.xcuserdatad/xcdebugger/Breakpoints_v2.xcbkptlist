@@ -41,72 +41,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "4Cast/Model/API/RESTClient.m"
-            timestampString = "545344475.803538"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-downloadIcon:completion:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "4Cast/Model/Objects/FiveDay3HourForecast.swift"
-            timestampString = "545344475.8036309"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "initFromJson(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ForeCast.FiveDay3HourForecast.initFromJson(Foundation.Data) -&gt; Swift.Optional&lt;ForeCast.FiveDay3HourForecast&gt;"
-                  moduleName = "4Cast"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Model/Objects/FiveDay3HourForecast.swift"
-                  timestampString = "545344342.999198"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "30">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_CastTests.FiveDay3HourForecast.initFromJson(Foundation.Data) -&gt; Swift.Optional&lt;_CastTests.FiveDay3HourForecast&gt;"
-                  moduleName = "4CastTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Model/Objects/FiveDay3HourForecast.swift"
-                  timestampString = "545344344.033154"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "30">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "4Cast/Model/Objects/ForecastListItem.swift"
-            timestampString = "545344475.804046"
+            timestampString = "545425425.955346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -154,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "4Cast/Model/Objects/ForecastListItem.swift"
-            timestampString = "545344475.804114"
+            timestampString = "545425425.955559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -202,45 +138,250 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "4Cast/Model/Objects/ForecastListItem.swift"
-            timestampString = "545344475.804177"
+            timestampString = "545425425.955677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
             landmarkName = "copy(with:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4CastTests/ForeCastTests.m"
+            timestampString = "545425425.955799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-testWeatherForTampaFL"
+            landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ForeCast.ForecastListItem.copy(with: Swift.Optional&lt;ObjectiveC.NSZone&gt;) -&gt; Any"
-                  moduleName = "4Cast"
+                  symbolName = "-[ForeCastTests testWeatherForTampaFL]"
+                  moduleName = "4CastTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Model/Objects/ForecastListItem.swift"
-                  timestampString = "545344475.96223"
+                  urlString = "file:///Users/chriswoodard/4Cast/4CastTests/ForeCastTests.m"
+                  timestampString = "545394314.175534"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[ForeCastTests testWeatherForTampaFL]_block_invoke"
+                  moduleName = "4CastTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chriswoodard/4Cast/4CastTests/ForeCastTests.m"
+                  timestampString = "545394314.178318"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "_CastTests.ForecastListItem.copy(with: Swift.Optional&lt;ObjectiveC.NSZone&gt;) -&gt; Any"
+                  symbolName = "__destroy_helper_block_"
                   moduleName = "4CastTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Model/Objects/ForecastListItem.swift"
-                  timestampString = "545344477.091902"
+                  urlString = "file:///Users/chriswoodard/4Cast/4CastTests/ForeCastTests.m"
+                  timestampString = "545394314.181025"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4Cast/Forecast/ForecastViewController.m"
+            timestampString = "545425425.955923"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4Cast/Forecast/ForecastViewController.m"
+            timestampString = "545425425.956035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-fetchTheWeather:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[ForecastViewController fetchTheWeather:]_block_invoke_2"
+                  moduleName = "4Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Forecast/ForecastViewController.m"
+                  timestampString = "545414958.717286"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[ForecastViewController fetchTheWeather:]_block_invoke_3"
+                  moduleName = "4Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Forecast/ForecastViewController.m"
+                  timestampString = "545414958.719781"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.131"
+                  moduleName = "4Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Forecast/ForecastViewController.m"
+                  timestampString = "545414958.722237"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4Cast/Model/API/RESTClient.m"
+            timestampString = "545425425.956151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-forecastForCity:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4Cast/Model/API/RESTClient.m"
+            timestampString = "545425425.9562761"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-forecastForCity:completion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RESTClient forecastForCity:completion:]"
+                  moduleName = "4Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Model/API/RESTClient.m"
+                  timestampString = "545414958.735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1099">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[RESTClient forecastForCity:completion:]_block_invoke"
+                  moduleName = "4Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Model/API/RESTClient.m"
+                  timestampString = "545414958.737624"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "4Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chriswoodard/4Cast/4Cast/Model/API/RESTClient.m"
+                  timestampString = "545414958.74023"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4Cast/Model/API/RESTClient.m"
+            timestampString = "545425425.956396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-forecastForCity:completion:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

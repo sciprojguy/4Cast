@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Forecast-Swift.h"
 
 @interface RESTClient : NSObject
 
@@ -15,7 +14,7 @@
 
 +(RESTClient *)shared;
 
--(void)forecastForCity:(NSString *)cityAndCountry completion:(void(^)(FiveDay3HourForecast *forecast, NSError *err))completion;
+-(void)forecastForCity:(NSString *)cityAndCountry completion:(void(^)(NSDictionary *forecast, NSError *err))completion;
 -(void)downloadIcon:(NSString *)iconStem completion:(void(^)(NSDictionary *results))completion;
 
 @end

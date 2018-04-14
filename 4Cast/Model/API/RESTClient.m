@@ -41,11 +41,25 @@
 //todo: check in here for useMock.  if NO, proceed.  if YES,
 //look up JSON for city and country & return the forecast
 
--(void)forecastForCity:(NSString *)cityAndCountry completion:(void(^)(FiveDay3HourForecast *forecast, NSError *err))completion {
+-(void)forecastForCity:(NSString *)cityAndCountry completion:(void(^)(NSDictionary *forecast, NSError *err))completion {
 
     if(self.useMock) {
         TestingHelper *helper = [TestingHelper shared];
-        NSLog(@"USE MOCK");
+        NSData *data = [helper forecastWithCityandstate:cityAndCountry];
+        NSDictionary *forecast = nil;
+        NSError *err = nil;
+        if(data) {
+            forecast = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        }
+        else {
+            forecast = @{@"StatusCode":@404, @"StatusMsg":@"No Such City/Country"};
+        }
+
+        if(completion) {
+            completion(forecast, err);
+        }
+        
+        return;
     }
     
     NSMutableCharacterSet *allowed = [NSMutableCharacterSet
@@ -72,13 +86,12 @@
         httpResponse = (NSHTTPURLResponse *)response;
         
         //based on response get body and parse data into FiveDay3HourForecast
-        FiveDay3HourForecast *forecast = nil;
+        NSDictionary *forecast = nil;
         if(200 == httpResponse.statusCode) {
-            forecast = [[FiveDay3HourForecast alloc] initFromJson:data];
+            forecast = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         }
         else {
-            forecast = [[FiveDay3HourForecast alloc] init];
-            forecast.statusCode = httpResponse.statusCode;
+            forecast = @{@"StatusCode":@(httpResponse.statusCode)};
         }
         
         if(completion) {
@@ -95,7 +108,30 @@
 -(void)downloadIcon:(NSString *)iconStem completion:(void(^)(NSDictionary *results))completion {
 
     if(self.useMock) {
-        NSLog(@"USE MOCK");
+        
+        //build path to icon in bundle
+        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:iconStem ofType:@"png"];
+        //fetch it as NSData
+        NSData *imgData = [NSData dataWithContentsOfFile:path];
+        NSHTTPURLResponse *httpResponse = nil;
+        if(imgData) {
+            httpResponse = [[NSHTTPURLResponse alloc] initWithURL:[NSURL URLWithString:@"mock"] statusCode:200 HTTPVersion:@"1.1" headerFields:@{}];
+        
+        }
+        else {
+            httpResponse = [[NSHTTPURLResponse alloc] initWithURL:[NSURL URLWithString:@"mock"] statusCode:404 HTTPVersion:@"1.1" headerFields:@{}];
+        }
+        
+        NSMutableDictionary *responseDict = [[NSMutableDictionary alloc] init];
+        responseDict[@"Response"] = httpResponse;
+        if(imgData) {
+            responseDict[@"Data"] = imgData;
+        }
+        if(completion) {
+            completion(responseDict);
+        }
+        
+        return;
     }
     
     NSString *urlString = [[NSString alloc] initWithFormat:@"https://openweathermap.org/img/w/%@.png", iconStem];

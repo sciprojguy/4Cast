@@ -117,6 +117,7 @@
     for( NSInteger i=0; i<numForecasts; i++ ) {
         ForecastListItem *item = [self.forecast itemAtIndex:i];
         UIImage *icon = [ic iconNamed:item.icon];
+        icon = nil;
         if(nil == icon) {
             [self.weatherClient downloadIcon:item.icon completion:^(NSDictionary *results) {
                 if(results[@"Data"]) {
@@ -144,7 +145,7 @@
     
 dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //#2 - get forecast
-        [self.weatherClient forecastForCity:city completion:^(FiveDay3HourForecast *forecast, NSError *err) {
+        [self.weatherClient forecastForCity:city completion:^(NSDictionary *forecast, NSError *err) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [hud hideAnimated:YES];
                     [self.refreshControl endRefreshing];
@@ -153,11 +154,12 @@ dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), 
                     [self displayConnectionErrorAlert];
                 }
                 else {
-                    self.forecast = forecast;
+                    self.forecast = [[FiveDay3HourForecast alloc] initFromDict:forecast];
+                    
                     if(200 == self.forecast.statusCode) {
                         [self downloadIconsIfNecessary];
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            self.navigationItem.title = forecast.cityName;
+                            self.navigationItem.title = self.forecast.cityName;
                             [self.forecastsTable reloadData];
                         });
                     }
