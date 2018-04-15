@@ -29,15 +29,68 @@ class ForeCastUITests: XCTestCase {
     }
     
     func testLoadTampaForecast() {
+    
+        let app = XCUIApplication()
+        
+        sleep(5)
 
+        let label = app.staticTexts["CityAndCountry"]
+        XCTAssert(label.exists, "Label CityAndCountry does not exist")
+        XCTAssert( "New York" == (label.value as? String), "Wrong value")
+
+        //find our way to the search box & "Go" button
+        app.navigationBars["Forecast"].buttons["Search"].tap()
+        let searchBar = app.searchFields.element
+        
+        searchBar.tap()
+        sleep(2)
+        searchBar.typeText("Tampa,USA\n")
+        sleep(1)
+        
+        let isTampa = NSPredicate(format: "value CONTAINS 'Tampa'")
+        
+        let e = expectation(for: isTampa, evaluatedWith: label, handler: nil)
+        XCTWaiter.wait(for: [e], timeout: 5)
+
+        XCTAssert("Tampa" == (label.value as? String), "Wrong value: \(label.value as? String)")
     }
     
     func testLoadNewYorkForecast() {
     
+        let app = XCUIApplication()
+        
+        sleep(5)
+
+        let label = app.staticTexts["CityAndCountry"]
+        XCTAssert(label.exists, "Label CityAndCountry does not exist")
+        XCTAssert( "New York" == (label.value as? String), "Wrong value")
+
+        //find our way to the search box & "Go" button
+        app.navigationBars["Forecast"].buttons["Search"].tap()
+        let searchBar = app.searchFields.element
+        
+        searchBar.tap()
+        sleep(2)
+        searchBar.typeText("New York,USA\n")
+        sleep(1)
+        
+        let isTampa = NSPredicate(format: "value CONTAINS 'New York'")
+        
+        let e = expectation(for: isTampa, evaluatedWith: label, handler: nil)
+        XCTWaiter.wait(for: [e], timeout: 5)
+
+        XCTAssert("New York" == (label.value as? String), "Wrong value: \(label.value as? String)")
     }
     
     func testTryToLoadChicagoForecast() {
     
     }
     
+    func testLoadTampaForecastGetFirstDetail() {
+    
+    }
+    
+    func testLoadTampaForecastGetSecondDetail() {
+    
+    }
 }

@@ -44,6 +44,7 @@
 		9A6FA1392082113D00C393AA /* ForeCastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA1382082113D00C393AA /* ForeCastUITests.swift */; };
 		9A6FA1622082875100C393AA /* TestingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0F02080F95D00C393AA /* TestingHelper.swift */; };
 		9A6FA163208287E300C393AA /* TestingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */; };
+		9A6FA164208364DC00C393AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D88020658FF4003AD79C /* Main.storyboard */; };
 		9AA8DC582066E73500F6A642 /* ios-marketing.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC572066E73500F6A642 /* ios-marketing.png */; };
 		9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA8DC592066F23E00F6A642 /* QuartzCore.framework */; };
 		9AA8DC622067F0F600F6A642 /* ForecastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */; };
@@ -517,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6FA164208364DC00C393AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

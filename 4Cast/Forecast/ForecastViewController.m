@@ -17,11 +17,12 @@
 #import "RESTClient.h"
 #import "Forecast-Swift.h"
 
-@interface ForecastViewController () <UITableViewDelegate, UITableViewDataSource, ForecastDetailsDelegate, UITextFieldDelegate>
+@interface ForecastViewController () <UITableViewDelegate, UITableViewDataSource, ForecastDetailsDelegate, UISearchBarDelegate>
 
-@property (weak, nonatomic) IBOutlet SearchView *searchView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) RESTClient *weatherClient;
 @property (weak, nonatomic) IBOutlet UITableView *forecastsTable;
+@property (weak, nonatomic) IBOutlet UILabel *cityAndCountryLabel;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) FiveDay3HourForecast *forecast;
 @end
@@ -75,22 +76,29 @@
 }
 
 - (IBAction)toggleSearchView:(id)sender {
-    if(self.searchView.hidden) {
+    if(self.searchBar.hidden) {
         [UIView animateWithDuration:0.5 animations:^{
-            self.searchView.hidden = NO;
-            [self.view bringSubviewToFront:self.searchView];
+            self.searchBar.hidden = NO;
+            [self.view bringSubviewToFront:self.searchBar];
         }];
     }
     else {
         [UIView animateWithDuration:0.25 animations:^{
-            self.searchView.hidden = YES;
+            self.searchBar.hidden = YES;
         }];
     }
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self fetchTheWeather:nil];
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+
+}
+
+-(BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {
     return YES;
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self fetchTheWeather:nil];
 }
 
 - (void)displayConnectionErrorAlert {
@@ -131,17 +139,19 @@
     }
 }
 
+//MARK: fetches the weather forecast
+
 -(IBAction)fetchTheWeather:(id)sender {
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    NSString *city = self.searchView.cityField.text;
+    NSString *city = self.searchBar.text;
     if(nil == city || [@"" isEqualToString:city]) {
         city = @"New York,USA";
     }
     
-    self.searchView.hidden = YES;
-    [self.searchView.cityField resignFirstResponder];
+    self.searchBar.hidden = YES;
+    [self.searchBar resignFirstResponder];
     
 dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //#2 - get forecast
@@ -159,7 +169,8 @@ dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), 
                     if(200 == self.forecast.statusCode) {
                         [self downloadIconsIfNecessary];
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            self.navigationItem.title = self.forecast.cityName;
+                            self.cityAndCountryLabel.text = self.forecast.cityName;
+                            self.cityAndCountryLabel.accessibilityValue = self.forecast.cityName;
                             [self.forecastsTable reloadData];
                         });
                     }
@@ -171,6 +182,7 @@ dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), 
     });
 }
 
+//MARK: Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([@"ForecastDetails" isEqualToString:segue.identifier]) {
         ForecastDetailsViewController *dvc = (ForecastDetailsViewController *)[segue destinationViewController];
