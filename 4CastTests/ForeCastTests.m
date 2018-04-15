@@ -101,7 +101,7 @@
     __block NSDictionary *theForecast = nil;
     __block NSError *anythingHappened = nil;
     
-    [self.restClient forecastForCity:@"New York,USA" completion:^(NSDictionary *results, NSError *err) {
+    [self.restClient forecastForCity:@"New/York,USA" completion:^(NSDictionary *results, NSError *err) {
         theForecast = results;
         anythingHappened = err;
         [expectation fulfill];

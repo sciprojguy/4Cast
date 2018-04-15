@@ -43,9 +43,15 @@
 
 -(void)forecastForCity:(NSString *)cityAndCountry completion:(void(^)(NSDictionary *forecast, NSError *err))completion {
 
+    NSMutableCharacterSet *allowed = [NSMutableCharacterSet
+                                alphanumericCharacterSet];
+    NSString *encoded = [cityAndCountry stringByAddingPercentEncodingWithAllowedCharacters:allowed];
+    encoded = [encoded stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+
     if(self.useMock) {
+    
         TestingHelper *helper = [TestingHelper shared];
-        NSData *data = [helper forecastWithCityandstate:cityAndCountry];
+        NSData *data = [helper forecastWithCityandstate:encoded];
         NSDictionary *forecast = nil;
         NSError *err = nil;
         if(data) {
@@ -61,11 +67,6 @@
         
         return;
     }
-    
-    NSMutableCharacterSet *allowed = [NSMutableCharacterSet
-                                    alphanumericCharacterSet];
-    NSString *encoded = [cityAndCountry stringByAddingPercentEncodingWithAllowedCharacters:allowed];
-    encoded = [encoded stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
     NSString *urlString = [[NSString alloc] initWithFormat:@"https://api.openweathermap.org/data/2.5/forecast?q=%@&units=imperial&appid=3a5a5533643dadd75a8c095541dea0ed", encoded];
     NSURL *url = [NSURL URLWithString:urlString];

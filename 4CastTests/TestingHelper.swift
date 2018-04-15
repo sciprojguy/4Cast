@@ -13,7 +13,8 @@ import Foundation
     override private init() {}
     @objc func forecast(cityandstate:String) -> Data? {
         var theForecast:Data? = nil
-        if let path = Bundle.main.path(forResource: cityandstate, ofType: "json") {
+        let decoded = cityandstate.removingPercentEncoding
+        if let path = Bundle.main.path(forResource: decoded, ofType: "json") {
             theForecast = try? Data(contentsOf: URL(fileURLWithPath: path))
         }
         return theForecast
