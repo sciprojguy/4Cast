@@ -18,7 +18,10 @@ class ForeCastUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        //todo: set launch argument to send "USE_MOCK"
+        let app = XCUIApplication()
+        app.launchEnvironment = ["USE_MOCK" : "true"]
+        app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -31,28 +34,21 @@ class ForeCastUITests: XCTestCase {
     func testLoadTampaForecast() {
     
         let app = XCUIApplication()
-        
-        sleep(5)
 
         let label = app.staticTexts["CityAndCountry"]
         XCTAssert(label.exists, "Label CityAndCountry does not exist")
-        XCTAssert( "New York" == (label.value as? String), "Wrong value")
 
-        //find our way to the search box & "Go" button
-        app.navigationBars["Forecast"].buttons["Search"].tap()
-        let searchBar = app.searchFields.element
-        
-        searchBar.tap()
-        sleep(2)
-        searchBar.typeText("Tampa,USA\n")
+        let searchField = app.otherElements["SearchField"]
+        searchField.tap()
         sleep(1)
+        searchField.typeText("Tampa,USA\n")
         
         let isTampa = NSPredicate(format: "value CONTAINS 'Tampa'")
         
         let e = expectation(for: isTampa, evaluatedWith: label, handler: nil)
-        XCTWaiter.wait(for: [e], timeout: 5)
+        _ = XCTWaiter.wait(for: [e], timeout: 30)
 
-        XCTAssert("Tampa" == (label.value as? String), "Wrong value: \(label.value as? String)")
+        XCTAssert("Tampa" == (label.value as? String), "Wrong value: \(label.value as? String ?? "")")
     }
     
     func testLoadNewYorkForecast() {
@@ -63,34 +59,88 @@ class ForeCastUITests: XCTestCase {
 
         let label = app.staticTexts["CityAndCountry"]
         XCTAssert(label.exists, "Label CityAndCountry does not exist")
-        XCTAssert( "New York" == (label.value as? String), "Wrong value")
 
-        //find our way to the search box & "Go" button
-        app.navigationBars["Forecast"].buttons["Search"].tap()
-        let searchBar = app.searchFields.element
-        
-        searchBar.tap()
+        let searchField = app.otherElements["SearchField"]
+        searchField.tap()
         sleep(2)
-        searchBar.typeText("New York,USA\n")
+        searchField.typeText("New York,USA\n")
         sleep(1)
         
-        let isTampa = NSPredicate(format: "value CONTAINS 'New York'")
+        let isNewYork = NSPredicate(format: "value CONTAINS 'New York'")
         
-        let e = expectation(for: isTampa, evaluatedWith: label, handler: nil)
-        XCTWaiter.wait(for: [e], timeout: 5)
+        let e = expectation(for: isNewYork, evaluatedWith: label, handler: nil)
+        _ = XCTWaiter.wait(for: [e], timeout: 5)
 
-        XCTAssert("New York" == (label.value as? String), "Wrong value: \(label.value as? String)")
+        XCTAssert("New York" == (label.value as? String), "Wrong value: \(label.value as? String ?? "")")
     }
     
     func testTryToLoadChicagoForecast() {
     
+        let app = XCUIApplication()
+        
+        sleep(5)
+
+        let label = app.staticTexts["CityAndCountry"]
+        XCTAssert(label.exists, "Label CityAndCountry does not exist")
+
+        let searchField = app.otherElements["SearchField"]
+        searchField.tap()
+        sleep(2)
+        searchField.typeText("Chicago,USA\n")
+        sleep(1)
+        
+        let isChicago = NSPredicate(format: "value CONTAINS 'Chicago'")
+        
+        let e = expectation(for: isChicago, evaluatedWith: label, handler: nil)
+        _ = XCTWaiter.wait(for: [e], timeout: 5)
+
+        XCTAssert("Chicago" != (label.value as? String), "Wrong value: \(label.value as? String ?? "")")
+    }
+
+    //"helper" methods to make tests more compact.  better helper
+    func tapOnRow(at index:Int, app:XCUIApplication) {
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["ForecastDescription"].tap()
+    }
+        
+    func testLoadNYForecastGetFirstDetail() {
+        
+        let app = XCUIApplication()
+
+        let label = app.staticTexts["CityAndCountry"]
+        XCTAssert(label.exists, "Label CityAndCountry does not exist")
+
+        let searchField = app.otherElements["SearchField"]
+        searchField.tap()
+        sleep(2)
+        searchField.typeText("New York,USA\n")
+        sleep(1)
+        
+        let isNewYork = NSPredicate(format: "value CONTAINS 'New York'")
+        
+        let e = expectation(for: isNewYork, evaluatedWith: label, handler: nil)
+        _ = XCTWaiter.wait(for: [e], timeout: 5)
+
+        XCTAssert("New York" == (label.value as? String), "Wrong value: \(label.value as? String ?? "")")
+
+        self.tapOnRow(at:0, app: app)
+        sleep(2)
+        
+        //todo: wait for label to appear
+        
     }
     
+    func testLoadNYForecastGetSecondDetail() {
+        let app = XCUIApplication()
+        
+    }
+
     func testLoadTampaForecastGetFirstDetail() {
-    
+        let app = XCUIApplication()
+        
     }
     
     func testLoadTampaForecastGetSecondDetail() {
-    
+        let app = XCUIApplication()
+        
     }
 }

@@ -17,8 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSString *val = [[[NSProcessInfo processInfo] environment] objectForKey:@"USE_MOCK"];
+
     RESTClient *client = [RESTClient shared];
-    client.useMock = NO;
+    if([@"true" isEqualToString:val]) {
+        client.useMock = YES;
+    }
+    else {
+        client.useMock = NO;
+    }
+    
     return YES;
 }
 

@@ -33,7 +33,6 @@
         config.networkServiceType = NSURLNetworkServiceTypeDefault;
         config.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
         client.session = [NSURLSession sessionWithConfiguration:config delegate:client delegateQueue:client.sessionQueue];
-
     });
     return client;
 }

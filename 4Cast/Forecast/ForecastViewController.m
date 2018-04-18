@@ -35,7 +35,7 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchTheWeather:) forControlEvents:UIControlEventValueChanged];
     [self.forecastsTable addSubview:self.refreshControl];
-
+    self.searchBar.accessibilityIdentifier = @"SearchField";
     self.weatherClient = [RESTClient shared];
     [self fetchTheWeather:nil];
 }
@@ -143,12 +143,13 @@
 
 -(IBAction)fetchTheWeather:(id)sender {
 
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
     NSString *city = self.searchBar.text;
     if(nil == city || [@"" isEqualToString:city]) {
-        city = @"New York,USA";
+        self.cityAndCountryLabel.text = @"";
+        return;
     }
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     self.searchBar.hidden = YES;
     [self.searchBar resignFirstResponder];

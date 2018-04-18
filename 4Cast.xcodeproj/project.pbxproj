@@ -41,13 +41,13 @@
 		9A6FA12D2081501F00C393AA /* 13d.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6FA10A2081501F00C393AA /* 13d.png */; };
 		9A6FA130208209FB00C393AA /* Tampa,USA.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A233EEA2066B5DA003ED104 /* Tampa,USA.json */; };
 		9A6FA131208209FB00C393AA /* New York,USA.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A233EEC2066B68D003ED104 /* New York,USA.json */; };
-		9A6FA1392082113D00C393AA /* ForeCastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA1382082113D00C393AA /* ForeCastUITests.swift */; };
 		9A6FA1622082875100C393AA /* TestingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0F02080F95D00C393AA /* TestingHelper.swift */; };
-		9A6FA163208287E300C393AA /* TestingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */; };
 		9A6FA164208364DC00C393AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D88020658FF4003AD79C /* Main.storyboard */; };
+		9A6FA1742085DDF200C393AA /* TestingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */; };
 		9AA8DC582066E73500F6A642 /* ios-marketing.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8DC572066E73500F6A642 /* ios-marketing.png */; };
 		9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA8DC592066F23E00F6A642 /* QuartzCore.framework */; };
 		9AA8DC622067F0F600F6A642 /* ForecastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */; };
+		9AA995D920869BAC00EE92A8 /* ForeCastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA1382082113D00C393AA /* ForeCastUITests.swift */; };
 		FEA5D73B78351801B8B68A41 /* libPods-4CastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6806A50A7E417479A20CC21C /* libPods-4CastTests.a */; };
 /* End PBXBuildFile section */
 
@@ -434,13 +434,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SampleSoft;
 				TargetAttributes = {
 					9A22D87620658FF4003AD79C = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					9A22D8A2206692E0003AD79C = {
 						CreatedOnToolsVersion = 9.2;
@@ -632,7 +632,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A233EF62066C990003ED104 /* SearchView.m in Sources */,
-				9A6FA163208287E300C393AA /* TestingAppDelegate.m in Sources */,
 				9A6FA0F52080FE7800C393AA /* FiveDay3HourForecast.swift in Sources */,
 				9A6FA1622082875100C393AA /* TestingHelper.swift in Sources */,
 				9A22D89E20659856003AD79C /* RESTClient.m in Sources */,
@@ -651,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A22D8A6206692E0003AD79C /* ForeCastTests.m in Sources */,
+				9A6FA1742085DDF200C393AA /* TestingAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A6FA1392082113D00C393AA /* ForeCastUITests.swift in Sources */,
+				9AA995D920869BAC00EE92A8 /* ForeCastUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +711,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -718,6 +719,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -766,6 +768,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -773,6 +776,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -797,6 +801,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -807,7 +812,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79GK225UV2;
 				INFOPLIST_FILE = "4Cast/Supporting Files/Info.plist";
@@ -816,8 +822,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
 				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
-				PROVISIONING_PROFILE_SPECIFIER = "Coding Challenge";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "4Cast/Model/Objects/4Cast-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Forecast-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -832,7 +838,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79GK225UV2;
 				INFOPLIST_FILE = "4Cast/Supporting Files/Info.plist";
@@ -841,8 +848,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = biz.SampleSoft.ForeCast;
 				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
-				PROVISIONING_PROFILE_SPECIFIER = "Coding Challenge";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "4Cast/Model/Objects/4Cast-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Forecast-Swift.h";
 				SWIFT_VERSION = 3.0;
@@ -904,15 +911,23 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 79GK225UV2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"USE_MOCK=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = 4CastUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastUITests";
 				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "4CastUITests/ForeCastUITests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Forecast-Swift.h";
@@ -930,15 +945,19 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 79GK225UV2;
+				GCC_PREPROCESSOR_DEFINITIONS = "USE_MOCK=1";
 				INFOPLIST_FILE = 4CastUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastUITests";
 				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37e989e9-5b4b-4022-a84f-cc6224f000ce";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "4CastUITests/ForeCastUITests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Forecast-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

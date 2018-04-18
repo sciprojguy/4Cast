@@ -37,15 +37,20 @@
     NSDateFormatter *fmtr = [[NSDateFormatter alloc] init];
     fmtr.dateFormat = @"EEEE, MMMM dd yyyy h:mm a";
     self.timeAndDate.text = [fmtr stringFromDate:item.dateTime];
-    
+    self.timeAndDate.accessibilityValue = [fmtr stringFromDate:item.dateTime];
+
     UIImage *iconImg = [[IconCache sharedCache] iconNamed:item.icon];
     self.iconView.image = iconImg;
     self.descriptionLabel.text = item.weatherDescription;
+    self.descriptionLabel.accessibilityValue = item.weatherDescription;
     
     self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low of %.1f ºF", item.tempMin];
+    self.lowTempLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"Low of %.1f ºF", item.tempMin];
     self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High of %.1f ºF", item.tempMax];
-    
+    self.highTempLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"High of %.1f ºF", item.tempMax];
+
     self.humidityLabel.text = [[NSString alloc] initWithFormat:@"Rel Humidity %ld%%", item.humidity];
+    self.humidityLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"Rel Humidity %ld%%", item.humidity];
 }
 
 - (void)didReceiveMemoryWarning {
