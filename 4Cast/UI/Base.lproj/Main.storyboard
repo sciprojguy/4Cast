@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,21 +50,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F14-gz-GXp">
-                                                    <rect key="frame" x="66" y="59" width="87" height="18"/>
+                                                    <rect key="frame" x="66" y="59" width="129" height="18"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="ForecastLowTemp" label="ForecastLowTemp"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="Ir6-sT-zBL"/>
-                                                        <constraint firstAttribute="width" constant="87" id="d2w-Uh-GUz"/>
+                                                        <constraint firstAttribute="width" constant="129" id="d2w-Uh-GUz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-m6-Ich">
-                                                    <rect key="frame" x="172" y="59" width="76" height="18"/>
+                                                    <rect key="frame" x="203" y="59" width="135" height="18"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="ForecastHighTemp" label="ForecastHighTemp"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="76" id="WP4-nZ-zqB"/>
+                                                        <constraint firstAttribute="width" constant="135" id="WP4-nZ-zqB"/>
                                                         <constraint firstAttribute="height" constant="18" id="dRq-Fg-RFh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -84,7 +83,7 @@
                                                 <constraint firstItem="u8c-m6-Ich" firstAttribute="top" secondItem="o9q-Ax-ep8" secondAttribute="bottom" constant="4.5" id="iyi-Cd-sxE"/>
                                                 <constraint firstAttribute="trailing" secondItem="o9q-Ax-ep8" secondAttribute="trailing" constant="15" id="nhi-cT-4u0"/>
                                                 <constraint firstItem="F14-gz-GXp" firstAttribute="top" secondItem="o9q-Ax-ep8" secondAttribute="bottom" constant="4.5" id="oSW-Ci-Zl3"/>
-                                                <constraint firstItem="u8c-m6-Ich" firstAttribute="leading" secondItem="F14-gz-GXp" secondAttribute="trailing" constant="19" id="ub9-Jx-cq5"/>
+                                                <constraint firstItem="u8c-m6-Ich" firstAttribute="leading" secondItem="F14-gz-GXp" secondAttribute="trailing" constant="8" id="ub9-Jx-cq5"/>
                                                 <constraint firstItem="F14-gz-GXp" firstAttribute="leading" secondItem="o9q-Ax-ep8" secondAttribute="leading" id="ys8-du-KNi"/>
                                             </constraints>
                                         </tableViewCellContentView>

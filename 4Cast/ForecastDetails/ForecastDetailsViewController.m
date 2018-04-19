@@ -44,10 +44,10 @@
     self.descriptionLabel.text = item.weatherDescription;
     self.descriptionLabel.accessibilityValue = item.weatherDescription;
     
-    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low of %.1f ºF", item.tempMin];
-    self.lowTempLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"Low of %.1f ºF", item.tempMin];
-    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High of %.1f ºF", item.tempMax];
-    self.highTempLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"High of %.1f ºF", item.tempMax];
+    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low of %.1f ºF", [item minTempF]];
+    self.lowTempLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"Low of %.1f ºF", [item minTempF]];
+    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High of %.1f ºF", [item maxTempF]];
+    self.highTempLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"High of %.1f ºF", [item maxTempF]];
 
     self.humidityLabel.text = [[NSString alloc] initWithFormat:@"Rel Humidity %ld%%", item.humidity];
     self.humidityLabel.accessibilityValue = [[NSString alloc] initWithFormat:@"Rel Humidity %ld%%", item.humidity];

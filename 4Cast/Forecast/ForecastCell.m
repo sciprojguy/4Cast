@@ -21,8 +21,8 @@
     self.iconView.image = [[IconCache sharedCache] iconNamed:item.icon];
     self.descriptionLabel.text = item.weatherDescription;
     
-    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low: %.1f ºF", item.tempMin];
-    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High: %.1f ºF", item.tempMax];
+    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low: %.1f ºF", [item  minTempF]];
+    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High: %.1f ºF", [item maxTempF]];
     NSDateFormatter *fmtr = [[NSDateFormatter alloc] init];
     fmtr.dateFormat = @"MMM d yy hh:mm a";
     self.dateAndTime.text = [fmtr stringFromDate:item.dateTime];

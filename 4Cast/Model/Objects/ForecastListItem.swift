@@ -105,6 +105,16 @@ import Foundation
         }
     }
     
+    public func minTempF() -> Double {
+        let tempC = self.tempMin - 273
+        return 32.0 + tempC * 9.0/5.0
+    }
+    
+    public func maxTempF() -> Double {
+        let tempC = self.tempMax - 273
+        return 32.0 + tempC * 9.0/5.0
+    }
+    
     @objc public func copy(with zone: NSZone? = nil) -> Any {
         return self.copy()
     }
