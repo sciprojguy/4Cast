@@ -20,6 +20,7 @@
 -(void)setUp {
     [super setUp];
     self.restClient = [RESTClient shared];
+    self.restClient.useMock = YES;
 }
 
 - (void)tearDown {

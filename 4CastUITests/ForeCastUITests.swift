@@ -64,10 +64,6 @@ class ForeCastUITests: XCTestCase {
         return (labelValue.value as! String?)
     }
     
-    func checkLabel(with labelId:String, value:String) {
-    
-    }
-    
     //MARK: - tests begin -
     
     func testLoadTampaForecast() {

@@ -125,7 +125,6 @@
 		9A6FA1362082113C00C393AA /* 4CastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4CastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6FA1382082113D00C393AA /* ForeCastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastUITests.swift; sourceTree = "<group>"; };
 		9A6FA13A2082113D00C393AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A6FA141208260B300C393AA /* ForeCastUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForeCastUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AA8DC572066E73500F6A642 /* ios-marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-marketing.png"; sourceTree = "<group>"; };
 		9AA8DC592066F23E00F6A642 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9AA8DC602067F0F600F6A642 /* 4Cast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "4Cast-Bridging-Header.h"; path = "../Model/Objects/4Cast-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -349,7 +348,6 @@
 			children = (
 				9A6FA1382082113D00C393AA /* ForeCastUITests.swift */,
 				9A6FA13A2082113D00C393AA /* Info.plist */,
-				9A6FA141208260B300C393AA /* ForeCastUITests-Bridging-Header.h */,
 			);
 			path = 4CastUITests;
 			sourceTree = "<group>";
