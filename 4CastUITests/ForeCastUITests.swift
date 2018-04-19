@@ -27,29 +27,49 @@ class ForeCastUITests: XCTestCase {
         super.tearDown()
     }
   
-    //helper method to shorten tests
+    //MARK: - helper methods -
+
     func loadForecast(city:String, country:String, app:XCUIApplication) {
         let cityAndCountry = "\(city),\(country)"
-        let label = app.staticTexts["CityAndCountry"]
-        XCTAssert(label.exists, "Label CityAndCountry does not exist")
+        let label = app.staticTexts["ForecastCity"]
+        XCTAssert(label.exists, "Label with AID ForecastCity does not exist")
 
         let searchField = app.otherElements["SearchField"]
         searchField.tap()
         sleep(1)
         searchField.typeText("\(cityAndCountry)\n")
         
-        let isCity = NSPredicate(format: "value CONTAINS '\(city)'")
+        waitForLabel(with: "ForecastCity", value: city, app: app)
+    }
+    
+    func waitForLabel(with labelId:String, value:String, app:XCUIApplication) {
+    
+        let label = app.staticTexts[labelId]
         
-        let e = expectation(for: isCity, evaluatedWith: label, handler: nil)
+        let isFound = NSPredicate(format: "value CONTAINS '\(value)'")
+        
+        let e = expectation(for: isFound, evaluatedWith: label, handler: nil)
         _ = XCTWaiter.wait(for: [e], timeout: 5)
 
-        XCTAssert(city == (label.value as? String), "Wrong city: \(label.value as? String ?? "")")
+        XCTAssert(value == (label.value as? String), "Wrong value: \(label.value as? String ?? "")")
     }
     
     func tapOnForecastCell(at index:Int, app:XCUIApplication) {
-        app.tables.children(matching: .cell).element(boundBy: index).staticTexts["ForecastDescription"].tap()
+        let cell = app.tables.children(matching: .cell).element(boundBy: index).staticTexts["ForecastDescription"]
+        cell.tap()
     }
 
+    func valueFromForecastCell(at index:Int, label:String, app:XCUIApplication) -> String? {
+        let labelValue = app.tables.children(matching: .cell).element(boundBy: index).staticTexts["ForecastDescription"]
+        return (labelValue.value as! String?)
+    }
+    
+    func checkLabel(with labelId:String, value:String) {
+    
+    }
+    
+    //MARK: - tests begin -
+    
     func testLoadTampaForecast() {
     
         let app = XCUIApplication()
@@ -73,12 +93,15 @@ class ForeCastUITests: XCTestCase {
         //load the mock forecast data
         loadForecast(city:"New York", country:"USA", app: app)
         
-        //tap on first cell
-        tapOnForecastCell(at:0, app: app)
-        
-        //todo: wait for label to appear
-        //todo: check for proper date and time
-        //todo: check for proper temperature
+        //get description from cell
+        if let description = valueFromForecastCell(at: 0, label: "ForecastDescription", app: app) {
+            
+            //tap on first cell
+            tapOnForecastCell(at:0, app: app)
+            
+            //wait for label to appear containing value
+            waitForLabel(with: "DetailDescription", value: description, app: app)
+        }
     }
     
     func testLoadNYForecastGetSecondDetail() {
@@ -87,12 +110,14 @@ class ForeCastUITests: XCTestCase {
         //load the mock forecast data
         loadForecast(city:"New York", country:"USA", app: app)
         
-        //tap on second cell
-        tapOnForecastCell(at:1, app: app)
+        if let description = valueFromForecastCell(at: 1, label: "ForecastDescription", app: app) {
+            
+            //tap on second cell
+            tapOnForecastCell(at:1, app: app)
         
-        //todo: wait for label to appear
-        //todo: check for proper date and time
-        //todo: check for proper temperature
+            //wait for label to appear containing value
+            waitForLabel(with: "DetailDescription", value: description, app: app)
+        }
     }
     
     func testLoadNYForecastGetThirdDetail() {
@@ -101,12 +126,14 @@ class ForeCastUITests: XCTestCase {
         //load the mock forecast data
         loadForecast(city:"New York", country:"USA", app: app)
         
-        //tap on third cell
-        tapOnForecastCell(at:2, app: app)
+        if let description = valueFromForecastCell(at: 2, label: "ForecastDescription", app: app) {
+            
+            //tap on third cell
+            tapOnForecastCell(at:2, app: app)
         
-        //todo: wait for label to appear
-        //todo: check for proper date and time
-        //todo: check for proper temperature
+            //wait for label to appear containing value
+            waitForLabel(with: "DetailDescription", value: description, app: app)
+        }
     }
 
     func testLoadTampaForecastGetFirstDetail() {
@@ -115,12 +142,15 @@ class ForeCastUITests: XCTestCase {
         //load the mock forecast data
         loadForecast(city:"Tampa", country:"USA", app: app)
 
-        //tap on third cell
-        tapOnForecastCell(at:2, app: app)
-        
-        //todo: wait for label to appear
-        //todo: check for proper date and time
-        //todo: check for proper temperature
+        //get description from cell
+        if let description = valueFromForecastCell(at: 0, label: "ForecastDescription", app: app) {
+            
+            //tap on first cell
+            tapOnForecastCell(at:0, app: app)
+            
+            //wait for label to appear containing value
+            waitForLabel(with: "DetailDescription", value: description, app: app)
+        }
     }
     
     func testLoadTampaForecastGetSecondDetail() {
@@ -129,12 +159,15 @@ class ForeCastUITests: XCTestCase {
         //load the mock forecast data
         loadForecast(city:"Tampa", country:"USA", app: app)
 
-        //tap on third cell
-        tapOnForecastCell(at:2, app: app)
-        
-        //todo: wait for label to appear
-        //todo: check for proper date and time
-        //todo: check for proper temperature
+        //get description from cell
+        if let description = valueFromForecastCell(at: 0, label: "ForecastDescription", app: app) {
+            
+            //tap on second cell
+            tapOnForecastCell(at:1, app: app)
+            
+            //wait for label to appear containing value
+            waitForLabel(with: "DetailDescription", value: description, app: app)
+        }
     }
     
     func testLoadTampaForecastGetThirdDetail() {
@@ -143,11 +176,14 @@ class ForeCastUITests: XCTestCase {
         //load the mock forecast data
         loadForecast(city:"Tampa", country:"USA", app: app)
         
-        //tap on third cell
-        tapOnForecastCell(at:2, app: app)
-        
-        //todo: wait for label to appear
-        //todo: check for proper date and time
-        //todo: check for proper temperature
+        //get description from cell
+        if let description = valueFromForecastCell(at: 0, label: "ForecastDescription", app: app) {
+            
+            //tap on third cell
+            tapOnForecastCell(at:2, app: app)
+            
+            //wait for label to appear containing value
+            waitForLabel(with: "DetailDescription", value: description, app: app)
+        }
     }
 }

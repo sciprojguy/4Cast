@@ -54,7 +54,7 @@
                                                     <accessibility key="accessibilityConfiguration" identifier="ForecastLowTemp" label="ForecastLowTemp"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="Ir6-sT-zBL"/>
-                                                        <constraint firstAttribute="width" constant="129" id="d2w-Uh-GUz"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="d2w-Uh-GUz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -64,7 +64,7 @@
                                                     <rect key="frame" x="203" y="59" width="135" height="18"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="ForecastHighTemp" label="ForecastHighTemp"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="135" id="WP4-nZ-zqB"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="WP4-nZ-zqB"/>
                                                         <constraint firstAttribute="height" constant="18" id="dRq-Fg-RFh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -81,9 +81,10 @@
                                                 <constraint firstItem="e5N-n2-2ha" firstAttribute="leading" secondItem="t7e-RZ-gOx" secondAttribute="trailing" constant="8" symbolic="YES" id="gL0-VW-6qX"/>
                                                 <constraint firstItem="o9q-Ax-ep8" firstAttribute="top" secondItem="e5N-n2-2ha" secondAttribute="bottom" constant="5" id="h8b-hp-pVg"/>
                                                 <constraint firstItem="u8c-m6-Ich" firstAttribute="top" secondItem="o9q-Ax-ep8" secondAttribute="bottom" constant="4.5" id="iyi-Cd-sxE"/>
+                                                <constraint firstAttribute="trailing" secondItem="u8c-m6-Ich" secondAttribute="trailing" constant="37" id="lyr-sA-HPk"/>
                                                 <constraint firstAttribute="trailing" secondItem="o9q-Ax-ep8" secondAttribute="trailing" constant="15" id="nhi-cT-4u0"/>
                                                 <constraint firstItem="F14-gz-GXp" firstAttribute="top" secondItem="o9q-Ax-ep8" secondAttribute="bottom" constant="4.5" id="oSW-Ci-Zl3"/>
-                                                <constraint firstItem="u8c-m6-Ich" firstAttribute="leading" secondItem="F14-gz-GXp" secondAttribute="trailing" constant="8" id="ub9-Jx-cq5"/>
+                                                <constraint firstItem="u8c-m6-Ich" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F14-gz-GXp" secondAttribute="trailing" symbolic="YES" id="ub9-Jx-cq5"/>
                                                 <constraint firstItem="F14-gz-GXp" firstAttribute="leading" secondItem="o9q-Ax-ep8" secondAttribute="leading" id="ys8-du-KNi"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -104,7 +105,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIX-Gu-UwV">
                                 <rect key="frame" x="8" y="72" width="359" height="21"/>
-                                <accessibility key="accessibilityConfiguration" identifier="CityAndCountry" label="CityAndCountry"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ForecastCity" label="ForecastCity"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="tRZ-OQ-zpe"/>
                                 </constraints>
@@ -160,6 +161,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ4-cE-Dza">
                                 <rect key="frame" x="16" y="76" width="343" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailTimeAndDate" label="DetailTimeAndDate"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FOL-nY-cax"/>
                                 </constraints>
@@ -170,6 +172,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQW-nr-KB4">
                                 <rect key="frame" x="74" y="138" width="285" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailDescription" label="DetailDescription"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,6 +184,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUO-86-fFb">
                                 <rect key="frame" x="16" y="206" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailLowTemp" label="DetailLowTemp"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,6 +192,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQx-Y2-eVD">
                                 <rect key="frame" x="16" y="235" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="DetailHighTemp" label="DetailHighTemp"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

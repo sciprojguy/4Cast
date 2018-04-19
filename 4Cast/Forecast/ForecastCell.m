@@ -20,6 +20,7 @@
     //move this into ForecastCell
     self.iconView.image = [[IconCache sharedCache] iconNamed:item.icon];
     self.descriptionLabel.text = item.weatherDescription;
+    self.descriptionLabel.accessibilityValue = item.weatherDescription;
     
     self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low: %.1f ºF", [item  minTempF]];
     self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High: %.1f ºF", [item maxTempF]];
