@@ -22,8 +22,8 @@
     self.descriptionLabel.text = item.weatherDescription;
     self.descriptionLabel.accessibilityValue = item.weatherDescription;
     
-    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low: %.1f ºF", [item  minTempF]];
-    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High: %.1f ºF", [item maxTempF]];
+    self.lowTempLabel.text = [[NSString alloc] initWithFormat:@"Low: %.1f ºF", item.tempMin];
+    self.highTempLabel.text = [[NSString alloc] initWithFormat:@"High: %.1f ºF", item.tempMax];
     NSDateFormatter *fmtr = [[NSDateFormatter alloc] init];
     fmtr.dateFormat = @"MMM d yy hh:mm a";
     self.dateAndTime.text = [fmtr stringFromDate:item.dateTime];

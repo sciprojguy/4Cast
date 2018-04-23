@@ -76,17 +76,17 @@
 }
 
 - (IBAction)toggleSearchView:(id)sender {
-    if(self.searchBar.hidden) {
-        [UIView animateWithDuration:0.5 animations:^{
-            self.searchBar.hidden = NO;
-            [self.view bringSubviewToFront:self.searchBar];
-        }];
-    }
-    else {
-        [UIView animateWithDuration:0.25 animations:^{
-            self.searchBar.hidden = YES;
-        }];
-    }
+//    if(self.searchBar.hidden) {
+//        [UIView animateWithDuration:0.5 animations:^{
+//            self.searchBar.hidden = NO;
+//            [self.view bringSubviewToFront:self.searchBar];
+//        }];
+//    }
+//    else {
+//        [UIView animateWithDuration:0.25 animations:^{
+//            self.searchBar.hidden = YES;
+//        }];
+//    }
 }
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
@@ -111,12 +111,14 @@
 }
 
 - (void)displayAPIErrorAlert {
-    UIAlertController *alert = [[UIAlertController alloc] init];
-    [alert setTitle:@"Error"];
-    [alert setMessage:@"Unable to retrieve a forecast for that city.  Please check its spelling and try again."];
-    [alert addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-    }]];
-    [self presentViewController:alert animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertController *alert = [[UIAlertController alloc] init];
+        [alert setTitle:@"Error"];
+        [alert setMessage:@"Unable to retrieve a forecast for that city.  Please check its spelling and try again."];
+        [alert addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    });
 }
 
 - (void)downloadIconsIfNecessary {
@@ -151,8 +153,8 @@
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    self.searchBar.hidden = YES;
-    [self.searchBar resignFirstResponder];
+//    self.searchBar.hidden = YES;
+//    [self.searchBar resignFirstResponder];
     
 dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //#2 - get forecast

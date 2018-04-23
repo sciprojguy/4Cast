@@ -20,6 +20,7 @@
 		9A233EF32066BF06003ED104 /* IconCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF22066BF05003ED104 /* IconCache.m */; };
 		9A233EF62066C990003ED104 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF52066C990003ED104 /* SearchView.m */; };
 		9A233EF92066CC41003ED104 /* ForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF82066CC41003ED104 /* ForecastCell.m */; };
+		9A30BC7B208A607100E6F033 /* QuickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A30BC7A208A607100E6F033 /* QuickTests.swift */; };
 		9A6FA0F52080FE7800C393AA /* FiveDay3HourForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0F42080FE7800C393AA /* FiveDay3HourForecast.swift */; };
 		9A6FA10B2081501F00C393AA /* 09n.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6FA0F92081501E00C393AA /* 09n.png */; };
 		9A6FA10D2081501F00C393AA /* 01d.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6FA0FA2081501E00C393AA /* 01d.png */; };
@@ -99,6 +100,7 @@
 		9A233EF52066C990003ED104 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		9A233EF72066CC41003ED104 /* ForecastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastCell.h; sourceTree = "<group>"; };
 		9A233EF82066CC41003ED104 /* ForecastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastCell.m; sourceTree = "<group>"; };
+		9A30BC7A208A607100E6F033 /* QuickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTests.swift; sourceTree = "<group>"; };
 		9A6FA0ED2080EAD600C393AA /* TestingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingAppDelegate.h; sourceTree = "<group>"; };
 		9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingAppDelegate.m; sourceTree = "<group>"; };
 		9A6FA0F02080F95D00C393AA /* TestingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingHelper.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */,
 				9A6FA0F02080F95D00C393AA /* TestingHelper.swift */,
 				9A6FA0F22080F98A00C393AA /* ForeCastTests-Bridging-Header.h */,
+				9A30BC7A208A607100E6F033 /* QuickTests.swift */,
 			);
 			path = 4CastTests;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A30BC7B208A607100E6F033 /* QuickTests.swift in Sources */,
 				9A22D8A6206692E0003AD79C /* ForeCastTests.m in Sources */,
 				9A6FA1742085DDF200C393AA /* TestingAppDelegate.m in Sources */,
 			);
@@ -859,7 +863,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -883,7 +887,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -905,7 +909,7 @@
 		9A6FA13E2082113D00C393AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
@@ -939,7 +943,7 @@
 		9A6FA13F2082113D00C393AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;

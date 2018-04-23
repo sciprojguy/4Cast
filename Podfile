@@ -2,15 +2,22 @@
 platform :ios, '9.0'
 
 target '4Cast' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
 
-  # Pods for 4Cast
-  pod 'MBProgressHUD'
+    pod 'MBProgressHUD'
 
-  target '4CastTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    use_frameworks!
+
+    def testing_pods
+        pod 'Quick'
+        pod 'Nimble'
+    end
+
+    target '4CastTests' do
+        testing_pods
+    end
+
+    target '4CastUITests' do
+        testing_pods
+    end
 
 end
