@@ -1,8 +1,8 @@
 //
-//  _CastTests.m
+//  ForeCastMockApiTests.m
 //  4CastTests
 //
-//  Created by Chris Woodard on 3/24/18.
+//  Created by Chris Woodard on 5/14/18.
 //  Copyright © 2018 SampleSoft. All rights reserved.
 //
 
@@ -10,21 +10,15 @@
 
 #import "Forecast-Swift.h"
 
-#import "RESTClient.h"
-#import "IconCache.h"
-
-@interface ForeCastTests : XCTestCase
-@property (strong, nonatomic) RESTClient *restClient;
-@property (strong, nonatomic) LiveRestAPI *restAPI;
+@interface ForeCastMockApiTests : XCTestCase
+@property (strong, nonatomic) MockRestAPI *restAPI;
 @end
 
-@implementation ForeCastTests
+@implementation ForeCastMockApiTests
 
--(void)setUp {
+- (void)setUp {
     [super setUp];
-    self.restClient = [RESTClient shared];
-    self.restClient.useMock = YES;
-    self.restAPI = [LiveRestAPI shared];
+    self.restAPI = [MockRestAPI shared];
 }
 
 - (void)tearDown {
@@ -32,13 +26,13 @@
     [super tearDown];
 }
 
--(void)testGetWeatherForTampaFL {
+- (void)testGetMockForecastForTampa {
 
     XCTestExpectation *expectation = [self expectationWithDescription:@"asynchronous request"];
     __block NSDictionary *theForecast = nil;
     __block NSError *anythingHappened = nil;
 
-    [self.restAPI forecastFor:@"Tampa,USA" completion:^(NSDictionary *results, NSError *err) {
+    [self.restAPI forecastFor:@"Tampa,USA" completion:^(NSDictionary *results, NSError *err){
         theForecast = results;
         anythingHappened = err;
         [expectation fulfill];
@@ -48,14 +42,16 @@
     
     XCTAssertNotNil(theForecast, @"Unable to get the forecast");
     XCTAssertNil(anythingHappened, @"Got error: %@", anythingHappened);
+    XCTAssertTrue([@200 isEqualToNumber:theForecast[@"Status"]], @"Should be 200, not %@", theForecast[@"Status"]);
 }
 
--(void)testWeatherForChicagoIL {
+- (void)testGetMockForecastForNewYork {
+
     XCTestExpectation *expectation = [self expectationWithDescription:@"asynchronous request"];
     __block NSDictionary *theForecast = nil;
     __block NSError *anythingHappened = nil;
-    
-    [self.restAPI forecastFor:@"Chicago,USA" completion:^(NSDictionary *results, NSError *err) {
+
+    [self.restAPI forecastFor:@"New York,USA" completion:^(NSDictionary *results, NSError *err){
         theForecast = results;
         anythingHappened = err;
         [expectation fulfill];
@@ -64,27 +60,27 @@
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
     
     XCTAssertNotNil(theForecast, @"Unable to get the forecast");
-    XCTAssertEqual(200, [theForecast[@"Status"] integerValue], @"Should have been 200, not %ld", [theForecast[@"Status"] integerValue]);
     XCTAssertNil(anythingHappened, @"Got error: %@", anythingHappened);
+    XCTAssertTrue([@200 isEqualToNumber:theForecast[@"Status"]], @"Should be 200, not %@", theForecast[@"Status"]);
 }
 
--(void)testIconDownload {
+- (void)testGetMockForecastForChicago {
+
     XCTestExpectation *expectation = [self expectationWithDescription:@"asynchronous request"];
-    __block NSDictionary *theResults = nil;
-    [self.restAPI downloadIconFor:@"10d" completion:^(NSDictionary *results, NSError *err) {
-        theResults = results;
+    __block NSDictionary *theForecast = nil;
+    __block NSError *anythingHappened = nil;
+
+    [self.restAPI forecastFor:@"Chicago,USA" completion:^(NSDictionary *results, NSError *err){
+        theForecast = results;
+        anythingHappened = err;
         [expectation fulfill];
     }];
+    
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
-    XCTAssertNotNil(theResults[@"Response"], @"No response provided");
-    XCTAssertNotNil(theResults[@"Data"], @"No icon data provided");
     
-    IconCache *cache = [IconCache sharedCache];
-    [cache storeIcon:theResults[@"Data"] withName:@"10d"];
-    
-    UIImage *retrievedIcon = [cache iconNamed:@"10d"];
-    XCTAssertNotNil(retrievedIcon, @"No icon retrieved");
+    XCTAssertNotNil(theForecast, @"Unable to get the forecast");
+    XCTAssertNil(anythingHappened, @"Got error: %@", anythingHappened);
+    XCTAssertTrue([@404 isEqualToNumber:theForecast[@"Status"]], @"Should be 404, not %@", theForecast[@"Status"]);
 }
-
 
 @end

@@ -10,17 +10,17 @@
 #import "ForecastDetailsViewController.h"
 #import "SearchView.h"
 #import "ForecastCell.h"
+#import "AppDelegate.h"
 
 #import "MBProgressHUD.h"
-
 #import "IconCache.h"
-#import "RESTClient.h"
+
 #import "Forecast-Swift.h"
 
 @interface ForecastViewController () <UITableViewDelegate, UITableViewDataSource, ForecastDetailsDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, strong) RESTClient *weatherClient;
+@property (nonatomic, strong) id<WeatherApi> restAPI;
 @property (weak, nonatomic) IBOutlet UITableView *forecastsTable;
 @property (weak, nonatomic) IBOutlet UILabel *cityAndCountryLabel;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
@@ -36,7 +36,15 @@
     [self.refreshControl addTarget:self action:@selector(fetchTheWeather:) forControlEvents:UIControlEventValueChanged];
     [self.forecastsTable addSubview:self.refreshControl];
     self.searchBar.accessibilityIdentifier = @"SearchField";
-    self.weatherClient = [RESTClient shared];
+    
+    AppDelegate *appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    if(appDel.useMock) {
+        self.restAPI = [MockRestAPI shared];
+    }
+    else {
+        self.restAPI = [LiveRestAPI shared];
+    }
+    
     [self fetchTheWeather:nil];
 }
 
@@ -129,7 +137,7 @@
         UIImage *icon = [ic iconNamed:item.icon];
         icon = nil;
         if(nil == icon) {
-            [self.weatherClient downloadIcon:item.icon completion:^(NSDictionary *results) {
+            [self.restAPI downloadIconFor:item.icon completion:^(NSDictionary *results, NSError *err) {
                 if(results[@"Data"]) {
                     [ic storeIcon:results[@"Data"] withName:item.icon];
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -152,13 +160,10 @@
     }
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-//    self.searchBar.hidden = YES;
-//    [self.searchBar resignFirstResponder];
-    
-dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //#2 - get forecast
-        [self.weatherClient forecastForCity:city completion:^(NSDictionary *forecast, NSError *err) {
+    dispatch_queue_t queue = dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async( queue, ^{
+
+        [self.restAPI forecastFor:city completion:^(NSDictionary *forecast, NSError *err) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [hud hideAnimated:YES];
                     [self.refreshControl endRefreshing];
@@ -167,7 +172,7 @@ dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), 
                     [self displayConnectionErrorAlert];
                 }
                 else {
-                    self.forecast = [[FiveDay3HourForecast alloc] initFromDict:forecast];
+                    self.forecast = [[FiveDay3HourForecast alloc] initFromDict:forecast[@"Data"]];
                     
                     if(200 == self.forecast.statusCode) {
                         [self downloadIconsIfNecessary];

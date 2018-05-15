@@ -5,19 +5,4 @@ target '4Cast' do
 
     pod 'MBProgressHUD'
 
-    use_frameworks!
-
-    def testing_pods
-        pod 'Quick'
-        pod 'Nimble'
-    end
-
-    target '4CastTests' do
-        testing_pods
-    end
-
-    target '4CastUITests' do
-        testing_pods
-    end
-
 end

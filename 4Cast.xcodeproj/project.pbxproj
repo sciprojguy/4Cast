@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C1EE096CB1B534950774403 /* libPods-4Cast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3F60485CD0E23288A8BC77 /* libPods-4Cast.a */; };
 		9A22D87C20658FF4003AD79C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D87B20658FF4003AD79C /* AppDelegate.m */; };
 		9A22D87F20658FF4003AD79C /* ForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D87E20658FF4003AD79C /* ForecastViewController.m */; };
 		9A22D88220658FF4003AD79C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D88020658FF4003AD79C /* Main.storyboard */; };
@@ -15,12 +14,15 @@
 		9A22D88A20658FF4003AD79C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D88920658FF4003AD79C /* main.m */; };
 		9A22D8972065965F003AD79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A22D8962065965F003AD79C /* Assets.xcassets */; };
 		9A22D89B206597B6003AD79C /* ForecastDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D89A206597B6003AD79C /* ForecastDetailsViewController.m */; };
-		9A22D89E20659856003AD79C /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D89D20659856003AD79C /* RESTClient.m */; };
 		9A22D8A6206692E0003AD79C /* ForeCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22D8A5206692E0003AD79C /* ForeCastTests.m */; };
 		9A233EF32066BF06003ED104 /* IconCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF22066BF05003ED104 /* IconCache.m */; };
 		9A233EF62066C990003ED104 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF52066C990003ED104 /* SearchView.m */; };
 		9A233EF92066CC41003ED104 /* ForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A233EF82066CC41003ED104 /* ForecastCell.m */; };
-		9A30BC7B208A607100E6F033 /* QuickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A30BC7A208A607100E6F033 /* QuickTests.swift */; };
+		9A4C632C20A848DF0086E432 /* RestApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C632B20A848DF0086E432 /* RestApiProtocol.swift */; };
+		9A4C632E20A84C760086E432 /* LiveRestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C632D20A84C760086E432 /* LiveRestAPI.swift */; };
+		9A4C633020A84C840086E432 /* MockRestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C632F20A84C840086E432 /* MockRestAPI.swift */; };
+		9A4C633220A97E530086E432 /* ForeCastMockApiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C633120A97E530086E432 /* ForeCastMockApiTests.m */; };
+		9A4C633420AA00240086E432 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4C633320AA00240086E432 /* CoreLocation.framework */; };
 		9A6FA0F52080FE7800C393AA /* FiveDay3HourForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA0F42080FE7800C393AA /* FiveDay3HourForecast.swift */; };
 		9A6FA10B2081501F00C393AA /* 09n.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6FA0F92081501E00C393AA /* 09n.png */; };
 		9A6FA10D2081501F00C393AA /* 01d.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6FA0FA2081501E00C393AA /* 01d.png */; };
@@ -49,7 +51,7 @@
 		9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA8DC592066F23E00F6A642 /* QuartzCore.framework */; };
 		9AA8DC622067F0F600F6A642 /* ForecastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */; };
 		9AA995D920869BAC00EE92A8 /* ForeCastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA1382082113D00C393AA /* ForeCastUITests.swift */; };
-		FEA5D73B78351801B8B68A41 /* libPods-4CastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6806A50A7E417479A20CC21C /* libPods-4CastTests.a */; };
+		A5CF36683589A6A79C8D38FB /* libPods-4Cast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 296A7788B78ADA2D789BB438 /* libPods-4Cast.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +73,9 @@
 
 /* Begin PBXFileReference section */
 		08CD230925C4AE548B816B79 /* Pods-4Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-4Cast/Pods-4Cast.release.xcconfig"; sourceTree = "<group>"; };
-		3A3F60485CD0E23288A8BC77 /* libPods-4Cast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4Cast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		296A7788B78ADA2D789BB438 /* libPods-4Cast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4Cast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC24E68976073AFDC964442 /* Pods_4Cast_4CastTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4Cast_4CastTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6806A50A7E417479A20CC21C /* libPods-4CastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4CastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4CastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A22D87720658FF4003AD79C /* 4Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22D87A20658FF4003AD79C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A22D87B20658FF4003AD79C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,8 +88,6 @@
 		9A22D8962065965F003AD79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A22D899206597B6003AD79C /* ForecastDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastDetailsViewController.h; sourceTree = "<group>"; };
 		9A22D89A206597B6003AD79C /* ForecastDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastDetailsViewController.m; sourceTree = "<group>"; };
-		9A22D89C20659856003AD79C /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
-		9A22D89D20659856003AD79C /* RESTClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
 		9A22D8A3206692E0003AD79C /* 4CastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4CastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22D8A5206692E0003AD79C /* ForeCastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForeCastTests.m; sourceTree = "<group>"; };
 		9A22D8A7206692E0003AD79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +99,12 @@
 		9A233EF52066C990003ED104 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		9A233EF72066CC41003ED104 /* ForecastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastCell.h; sourceTree = "<group>"; };
 		9A233EF82066CC41003ED104 /* ForecastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastCell.m; sourceTree = "<group>"; };
-		9A30BC7A208A607100E6F033 /* QuickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTests.swift; sourceTree = "<group>"; };
+		9A4C632B20A848DF0086E432 /* RestApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiProtocol.swift; sourceTree = "<group>"; };
+		9A4C632D20A84C760086E432 /* LiveRestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRestAPI.swift; sourceTree = "<group>"; };
+		9A4C632F20A84C840086E432 /* MockRestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestAPI.swift; sourceTree = "<group>"; };
+		9A4C633120A97E530086E432 /* ForeCastMockApiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForeCastMockApiTests.m; sourceTree = "<group>"; };
+		9A4C633320AA00240086E432 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9A585FE9BF959838C23A8614 /* Pods_4Cast_4CastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4Cast_4CastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6FA0ED2080EAD600C393AA /* TestingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingAppDelegate.h; sourceTree = "<group>"; };
 		9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingAppDelegate.m; sourceTree = "<group>"; };
 		9A6FA0F02080F95D00C393AA /* TestingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingHelper.swift; sourceTree = "<group>"; };
@@ -139,8 +143,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4C633420AA00240086E432 /* CoreLocation.framework in Frameworks */,
 				9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */,
-				4C1EE096CB1B534950774403 /* libPods-4Cast.a in Frameworks */,
+				A5CF36683589A6A79C8D38FB /* libPods-4Cast.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +153,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEA5D73B78351801B8B68A41 /* libPods-4CastTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,9 +169,12 @@
 		26A40D040CD99A1366B494C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A4C633320AA00240086E432 /* CoreLocation.framework */,
 				9AA8DC592066F23E00F6A642 /* QuartzCore.framework */,
-				3A3F60485CD0E23288A8BC77 /* libPods-4Cast.a */,
 				6806A50A7E417479A20CC21C /* libPods-4CastTests.a */,
+				5DC24E68976073AFDC964442 /* Pods_4Cast_4CastTests.framework */,
+				9A585FE9BF959838C23A8614 /* Pods_4Cast_4CastUITests.framework */,
+				296A7788B78ADA2D789BB438 /* libPods-4Cast.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				9A22D8A5206692E0003AD79C /* ForeCastTests.m */,
+				9A4C633120A97E530086E432 /* ForeCastMockApiTests.m */,
 				9A22D8A7206692E0003AD79C /* Info.plist */,
 				9A233EEA2066B5DA003ED104 /* Tampa,USA.json */,
 				9A233EEC2066B68D003ED104 /* New York,USA.json */,
@@ -281,7 +289,6 @@
 				9A6FA0EE2080EAD600C393AA /* TestingAppDelegate.m */,
 				9A6FA0F02080F95D00C393AA /* TestingHelper.swift */,
 				9A6FA0F22080F98A00C393AA /* ForeCastTests-Bridging-Header.h */,
-				9A30BC7A208A607100E6F033 /* QuickTests.swift */,
 			);
 			path = 4CastTests;
 			sourceTree = "<group>";
@@ -289,8 +296,9 @@
 		9A233EEE2066BE63003ED104 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				9A22D89C20659856003AD79C /* RESTClient.h */,
-				9A22D89D20659856003AD79C /* RESTClient.m */,
+				9A4C632B20A848DF0086E432 /* RestApiProtocol.swift */,
+				9A4C632D20A84C760086E432 /* LiveRestAPI.swift */,
+				9A4C632F20A84C840086E432 /* MockRestAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -360,8 +368,6 @@
 			children = (
 				FC4A59A31923B46F7787DC35 /* Pods-4Cast.debug.xcconfig */,
 				08CD230925C4AE548B816B79 /* Pods-4Cast.release.xcconfig */,
-				3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */,
-				74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -393,12 +399,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A22D8AA206692E0003AD79C /* Build configuration list for PBXNativeTarget "4CastTests" */;
 			buildPhases = (
-				36DF49CB5AD33CEC4284FA8E /* [CP] Check Pods Manifest.lock */,
 				9A22D89F206692E0003AD79C /* Sources */,
 				9A22D8A0206692E0003AD79C /* Frameworks */,
 				9A22D8A1206692E0003AD79C /* Resources */,
-				80D26F6519948E934D195376 /* [CP] Embed Pods Frameworks */,
-				3A72F2F88C8FABECA441038D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -526,67 +529,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36DF49CB5AD33CEC4284FA8E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-4CastTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3A72F2F88C8FABECA441038D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7F8547B60B2E986816AAB921 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-4Cast/Pods-4Cast-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4Cast/Pods-4Cast-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		80D26F6519948E934D195376 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4CastTests/Pods-4CastTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9058E8E21FFE05F7F4F9053E /* [CP] Check Pods Manifest.lock */ = {
@@ -634,14 +592,16 @@
 			files = (
 				9A233EF62066C990003ED104 /* SearchView.m in Sources */,
 				9A6FA0F52080FE7800C393AA /* FiveDay3HourForecast.swift in Sources */,
+				9A4C632C20A848DF0086E432 /* RestApiProtocol.swift in Sources */,
 				9A6FA1622082875100C393AA /* TestingHelper.swift in Sources */,
-				9A22D89E20659856003AD79C /* RESTClient.m in Sources */,
 				9A22D87F20658FF4003AD79C /* ForecastViewController.m in Sources */,
 				9A22D88A20658FF4003AD79C /* main.m in Sources */,
 				9A233EF92066CC41003ED104 /* ForecastCell.m in Sources */,
+				9A4C633020A84C840086E432 /* MockRestAPI.swift in Sources */,
 				9A233EF32066BF06003ED104 /* IconCache.m in Sources */,
 				9AA8DC622067F0F600F6A642 /* ForecastListItem.swift in Sources */,
 				9A22D89B206597B6003AD79C /* ForecastDetailsViewController.m in Sources */,
+				9A4C632E20A84C760086E432 /* LiveRestAPI.swift in Sources */,
 				9A22D87C20658FF4003AD79C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,9 +610,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A30BC7B208A607100E6F033 /* QuickTests.swift in Sources */,
 				9A22D8A6206692E0003AD79C /* ForeCastTests.m in Sources */,
 				9A6FA1742085DDF200C393AA /* TestingAppDelegate.m in Sources */,
+				9A4C633220A97E530086E432 /* ForeCastMockApiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,7 +821,6 @@
 		};
 		9A22D8AB206692E0003AD79C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FF3CEAD02110B841CDB5B27 /* Pods-4CastTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -869,8 +828,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79GK225UV2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(CONFIGURATION_TEMP_DIR)/$(PROJECT_NAME).build/DerivedSources",
+				);
 				INFOPLIST_FILE = 4CastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastTests";
 				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -885,7 +849,6 @@
 		};
 		9A22D8AC206692E0003AD79C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74BB7E399505EFA101995ACF /* Pods-4CastTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -893,8 +856,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79GK225UV2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(CONFIGURATION_TEMP_DIR)/$(PROJECT_NAME).build/DerivedSources",
+				);
 				INFOPLIST_FILE = 4CastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.SampleSoft.-CastTests";
 				PRODUCT_MODULE_NAME = ForeCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -922,6 +890,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = 4CastUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -952,6 +921,7 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 79GK225UV2;
 				GCC_PREPROCESSOR_DEFINITIONS = "USE_MOCK=1";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = 4CastUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -7,26 +7,25 @@
 //
 
 #import "AppDelegate.h"
-#import "RESTClient.h"
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
 
+-(void)setUseMockBasedOnEnvironmentVariable {
+    NSString *val = [[[NSProcessInfo processInfo] environment] objectForKey:@"USE_MOCK"];
+    if([@"true" isEqualToString:val]) {
+        self.useMock = YES;
+    }
+    else {
+        self.useMock = NO;
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSString *val = [[[NSProcessInfo processInfo] environment] objectForKey:@"USE_MOCK"];
-
-    RESTClient *client = [RESTClient shared];
-    if([@"true" isEqualToString:val]) {
-        client.useMock = YES;
-    }
-    else {
-        client.useMock = NO;
-    }
+    [self setUseMockBasedOnEnvironmentVariable];
     
     return YES;
 }
