@@ -11,4 +11,6 @@ import Foundation
 @objc protocol WeatherApi {
     func forecast(for cityAndCountry:String, completion:@escaping ([String:Any]?, Error?) -> Void)
     func downloadIcon(for name:String, completion:@escaping ([String:Any], Error?) -> Void)
+    @objc optional func loadProfile(_ name:String)
+    @objc optional func clearProfile()
 }

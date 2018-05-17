@@ -182,4 +182,5 @@ class ForeCastUITests: XCTestCase {
             waitForLabel(with: "DetailDescription", value: description, app: app)
         }
     }
+
 }

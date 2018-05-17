@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, assign) BOOL useMock;
-
+@property (nonatomic, strong) NSString *statusProfileName;
 @end
 

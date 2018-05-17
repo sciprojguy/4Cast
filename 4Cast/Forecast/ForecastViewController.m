@@ -40,6 +40,9 @@
     AppDelegate *appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
     if(appDel.useMock) {
         self.restAPI = [MockRestAPI shared];
+        if(appDel.statusProfileName) {
+            [self.restAPI loadProfile:appDel.statusProfileName];
+        }
     }
     else {
         self.restAPI = [LiveRestAPI shared];

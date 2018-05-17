@@ -10,11 +10,9 @@
 
 #import "Forecast-Swift.h"
 
-#import "RESTClient.h"
 #import "IconCache.h"
 
 @interface ForeCastTests : XCTestCase
-@property (strong, nonatomic) RESTClient *restClient;
 @property (strong, nonatomic) LiveRestAPI *restAPI;
 @end
 
@@ -22,8 +20,6 @@
 
 -(void)setUp {
     [super setUp];
-    self.restClient = [RESTClient shared];
-    self.restClient.useMock = YES;
     self.restAPI = [LiveRestAPI shared];
 }
 

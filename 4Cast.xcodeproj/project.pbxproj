@@ -51,6 +51,18 @@
 		9AA8DC5A2066F23E00F6A642 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA8DC592066F23E00F6A642 /* QuartzCore.framework */; };
 		9AA8DC622067F0F600F6A642 /* ForecastListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */; };
 		9AA995D920869BAC00EE92A8 /* ForeCastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6FA1382082113D00C393AA /* ForeCastUITests.swift */; };
+		9AF15FE920ADAA5800E89B4F /* no_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FE820ADAA5800E89B4F /* no_network.json */; };
+		9AF15FEB20ADAA6F00E89B4F /* lost_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FEA20ADAA6F00E89B4F /* lost_network.json */; };
+		9AF15FEC20ADAA7600E89B4F /* no_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FE820ADAA5800E89B4F /* no_network.json */; };
+		9AF15FED20ADAA7600E89B4F /* lost_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FEA20ADAA6F00E89B4F /* lost_network.json */; };
+		9AF15FEE20ADAA7700E89B4F /* no_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FE820ADAA5800E89B4F /* no_network.json */; };
+		9AF15FEF20ADAA7700E89B4F /* lost_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FEA20ADAA6F00E89B4F /* lost_network.json */; };
+		9AF15FF520ADAA9500E89B4F /* 500_statuses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FF420ADAA9500E89B4F /* 500_statuses.json */; };
+		9AF15FF620ADAA9500E89B4F /* 500_statuses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FF420ADAA9500E89B4F /* 500_statuses.json */; };
+		9AF15FF720ADAA9500E89B4F /* 500_statuses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FF420ADAA9500E89B4F /* 500_statuses.json */; };
+		9AF15FF920ADAA9F00E89B4F /* 503_statuses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FF820ADAA9F00E89B4F /* 503_statuses.json */; };
+		9AF15FFA20ADAA9F00E89B4F /* 503_statuses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FF820ADAA9F00E89B4F /* 503_statuses.json */; };
+		9AF15FFB20ADAA9F00E89B4F /* 503_statuses.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF15FF820ADAA9F00E89B4F /* 503_statuses.json */; };
 		A5CF36683589A6A79C8D38FB /* libPods-4Cast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 296A7788B78ADA2D789BB438 /* libPods-4Cast.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +147,10 @@
 		9AA8DC592066F23E00F6A642 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9AA8DC602067F0F600F6A642 /* 4Cast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "4Cast-Bridging-Header.h"; path = "../Model/Objects/4Cast-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AA8DC612067F0F600F6A642 /* ForecastListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListItem.swift; sourceTree = "<group>"; };
+		9AF15FE820ADAA5800E89B4F /* no_network.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = no_network.json; sourceTree = "<group>"; };
+		9AF15FEA20ADAA6F00E89B4F /* lost_network.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lost_network.json; sourceTree = "<group>"; };
+		9AF15FF420ADAA9500E89B4F /* 500_statuses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 500_statuses.json; sourceTree = "<group>"; };
+		9AF15FF820ADAA9F00E89B4F /* 503_statuses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 503_statuses.json; sourceTree = "<group>"; };
 		FC4A59A31923B46F7787DC35 /* Pods-4Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4Cast/Pods-4Cast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +286,7 @@
 		9A22D89820659773003AD79C /* Supporting FIles */ = {
 			isa = PBXGroup;
 			children = (
+				9AF15FE720ADAA4400E89B4F /* Error Profiles */,
 				9AA8DC602067F0F600F6A642 /* 4Cast-Bridging-Header.h */,
 				9A22D88820658FF4003AD79C /* Info.plist */,
 				9A22D8962065965F003AD79C /* Assets.xcassets */,
@@ -361,6 +378,17 @@
 				9A6FA13A2082113D00C393AA /* Info.plist */,
 			);
 			path = 4CastUITests;
+			sourceTree = "<group>";
+		};
+		9AF15FE720ADAA4400E89B4F /* Error Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				9AF15FE820ADAA5800E89B4F /* no_network.json */,
+				9AF15FEA20ADAA6F00E89B4F /* lost_network.json */,
+				9AF15FF420ADAA9500E89B4F /* 500_statuses.json */,
+				9AF15FF820ADAA9F00E89B4F /* 503_statuses.json */,
+			);
+			path = "Error Profiles";
 			sourceTree = "<group>";
 		};
 		E6EE6287C39693DBAD02031C /* Pods */ = {
@@ -492,17 +520,21 @@
 				9A6FA1132081501F00C393AA /* 01n.png in Resources */,
 				9A6FA10B2081501F00C393AA /* 09n.png in Resources */,
 				9A6FA11B2081501F00C393AA /* 13n.png in Resources */,
+				9AF15FE920ADAA5800E89B4F /* no_network.json in Resources */,
 				9A6FA11D2081501F00C393AA /* 04n.png in Resources */,
 				9A6FA1212081501F00C393AA /* 09d.png in Resources */,
 				9A6FA1232081501F00C393AA /* 03n.png in Resources */,
 				9A6FA1252081501F00C393AA /* 50n.png in Resources */,
+				9AF15FF520ADAA9500E89B4F /* 500_statuses.json in Resources */,
 				9A22D88720658FF4003AD79C /* LaunchScreen.storyboard in Resources */,
 				9A6FA1112081501F00C393AA /* 11n.png in Resources */,
 				9A6FA11F2081501F00C393AA /* 02d.png in Resources */,
+				9AF15FEB20ADAA6F00E89B4F /* lost_network.json in Resources */,
 				9A6FA10F2081501F00C393AA /* 50d.png in Resources */,
 				9A6FA12D2081501F00C393AA /* 13d.png in Resources */,
 				9A6FA1292081501F00C393AA /* 02n.png in Resources */,
 				9A6FA12B2081501F00C393AA /* 10n.png in Resources */,
+				9AF15FF920ADAA9F00E89B4F /* 503_statuses.json in Resources */,
 				9A22D8972065965F003AD79C /* Assets.xcassets in Resources */,
 				9A6FA10D2081501F00C393AA /* 01d.png in Resources */,
 				9AA8DC582066E73500F6A642 /* ios-marketing.png in Resources */,
@@ -515,6 +547,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF15FF620ADAA9500E89B4F /* 500_statuses.json in Resources */,
+				9AF15FFA20ADAA9F00E89B4F /* 503_statuses.json in Resources */,
+				9AF15FED20ADAA7600E89B4F /* lost_network.json in Resources */,
+				9AF15FEC20ADAA7600E89B4F /* no_network.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +559,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6FA164208364DC00C393AA /* Main.storyboard in Resources */,
+				9AF15FEE20ADAA7700E89B4F /* no_network.json in Resources */,
+				9AF15FEF20ADAA7700E89B4F /* lost_network.json in Resources */,
+				9AF15FFB20ADAA9F00E89B4F /* 503_statuses.json in Resources */,
+				9AF15FF720ADAA9500E89B4F /* 500_statuses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

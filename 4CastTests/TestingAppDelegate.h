@@ -11,5 +11,7 @@
 @interface TestingAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, assign) BOOL useMock;
+@property (nonatomic, strong) NSString *statusProfileName;
 
 @end

@@ -14,9 +14,11 @@
 @implementation AppDelegate
 
 -(void)setUseMockBasedOnEnvironmentVariable {
-    NSString *val = [[[NSProcessInfo processInfo] environment] objectForKey:@"USE_MOCK"];
-    if([@"true" isEqualToString:val]) {
+    NSString *useMockValue = [[[NSProcessInfo processInfo] environment] objectForKey:@"USE_MOCK"];
+    NSString *statusProfile = [[[NSProcessInfo processInfo] environment] objectForKey:@"PROFILE"];
+    if([@"true" isEqualToString:useMockValue]) {
         self.useMock = YES;
+        self.statusProfileName = statusProfile;
     }
     else {
         self.useMock = NO;
