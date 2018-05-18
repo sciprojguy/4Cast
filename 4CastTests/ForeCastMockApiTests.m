@@ -120,7 +120,7 @@
     
     XCTAssertNotNil(theForecast, @"Unable to get the forecast");
     XCTAssertNil(anythingHappened, @"Got error: %@", anythingHappened);
-    XCTAssertTrue([@500 isEqualToNumber:theForecast[@"Status"]], @"Should be 200, not %@", theForecast[@"Status"]);
+    XCTAssertTrue([@500 isEqualToNumber:theForecast[@"Status"]], @"Should be 500, not %@", theForecast[@"Status"]);
 }
 
 @end
